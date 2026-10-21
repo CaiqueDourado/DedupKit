@@ -149,7 +149,7 @@ potência 9, e 41 casamentos por EAN cujos nomes não têm nenhuma palavra em co
 | image | Toalheiro Elétrico A20 220v Emmeti | Toalheiro Elétrico A10 127v Emmeti | voltagem 220 vs 127 |
 | image | Pen Drive 32gb de Couro Branco com Argola ... | Pen Drive 4gb Personalizado de Couro Branco ... | memória 32 vs 4 GB |
 
-No catálogo antigo, cada um desses pares era uma única página de produto. Já a conferência de marca recusou
+No catálogo antigo, cada um desses pares era uma única página de produto. O catálogo completo (114,6 milhões de ofertas, 18,3 milhões de grupos) está no [Kaggle](https://www.kaggle.com/datasets/caiquedourado/catalogo-produtos-ecommerce-brasil), para rodar o DedupKit em escala. Já a conferência de marca recusou
 6.729 pares na mesma amostra, a maioria corretos, porque os marketplaces preenchem o campo marca com o nome
 do vendedor. Ligue (`check_brands=True`) só quando o seu campo de marca for limpo.
 

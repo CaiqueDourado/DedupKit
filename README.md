@@ -149,7 +149,7 @@ weight 25, power 9, and 41 barcode matches whose names share no word.
 | image | Toalheiro Elétrico A20 220v Emmeti | Toalheiro Elétrico A10 127v Emmeti | voltage 220 vs 127 |
 | image | Pen Drive 32gb de Couro Branco com Argola ... | Pen Drive 4gb Personalizado de Couro Branco ... | memory 32 vs 4 GB |
 
-Every one of these was a single product page in the old catalog. The brand check, on the other
+Every one of these was a single product page in the old catalog. The full catalog (114.6 million offers, 18.3 million groups) is on [Kaggle](https://www.kaggle.com/datasets/caiquedourado/catalogo-produtos-ecommerce-brasil), if you want to run DedupKit at scale. The brand check, on the other
 hand, refused 6,729 pairs in the same sample, mostly correct ones, because marketplaces fill the
 brand field with the seller's name. Turn it on (`check_brands=True`) only when your brand field is clean.
 
