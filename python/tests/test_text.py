@@ -84,5 +84,13 @@ def test_attributes_and_conflicts():
     assert dk.conflict("Ração Golden 2,5kg", "Ração Golden 15kg") == "weight_kg: 2.5 vs 15"
     assert dk.conflict("Liquidificador 110V/220V", "Liquidificador 220 V") is None
     assert dk.conflict("Liquidificador Bivolt", "Liquidificador 220V") is None
-    assert dk.conflict("Geladeira Branca", "Geladeira Inox") == "colour: branco vs inox"
+    assert dk.conflict("Geladeira Branca", "Geladeira Inox") == "colour: branco vs prata"
+    assert dk.conflict("Concha Inox", "Concha Prata") is None
+    assert dk.conflict("Forno 110V", "Forno 127V") is None
+    assert dk.conflict("Bota - 38 - Preto", "Bota - 40 - Preto") == "size: 38 vs 40"
+    assert dk.conflict("Meia Kit 3 Pares", "Meia Kit 6 Pares") == "quantity: 3 vs 6"
+    assert dk.conflict("Quadro 20x30", "Quadro 30x40") == "dimensions: 20x30 vs 30x40"
+    assert dk.conflict("Porta Escova 10,6 X 8,5 X 10,6 Cm", "Porta Escova 10,6x8,5cm") is None
+    assert dk.conflict("Toalha 1,50 x 2,00 m", "Toalha 150x200cm") is None
+    assert dk.conflict('TV 55" Samsung', 'TV 40" Samsung') == "screen_in: 55 vs 40"
     assert dk.conflict("Tênis Masculino", "Tênis Feminino") == "gender: masculino vs feminino"

@@ -28,8 +28,10 @@ versões são conferidas contra os mesmos 448 textos e 8 configurações de agru
   fonética (`xuveiro` = `chuveiro`, `caçarola` = `cassarola`) e URLs sem parâmetros de rastreamento.
 - **Códigos como as lojas preenchem:** dígito verificador do GTIN, valores de enchimento
   (`SEM GTIN`, `0`, `7.89E+12`), códigos longos e curtos e uma lista de códigos que uma loja usa para tudo.
-- **Conferência de atributos:** dois anúncios nunca são juntados quando os nomes dizem tamanhos,
-  pesos, volumes, voltagens, potências, memórias, cores ou gênero diferentes (`400g` vs `500g`, `110V` vs `220V`).
+- **Conferência de atributos:** dois anúncios nunca são juntados quando os nomes dizem medidas
+  (`400g` vs `500g`, `110V` vs `220V`, `20x30` vs `30x40`), memórias, cores, gênero, tamanhos de roupa ou
+  calçado (`- 38 -` vs `- 40 -`) ou quantidades (`Kit 3 Pares` vs `Kit 6 Pares`) diferentes. Ela sabe que
+  110 V e 127 V são a mesma rede elétrica e que inox, prata e cromado são a mesma cor.
 - **Trilha de auditoria:** cada ligação registra a regra e o valor que a criaram, e cada par recusado diz o motivo.
 
 ## Instalação
@@ -137,9 +139,11 @@ desligada porque os dados reais a derrubaram.
 
 [`evaluation/real_sample.py`](evaluation/real_sample.py) roda a conferência de atributos sobre as 28.569 ofertas
 da [amostra pública do catálogo](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil),
-agrupadas em 2019 em 4.030 grupos. Sem mudar nenhum parâmetro, **762 desses grupos seriam divididos**.
-Pares recusados, por motivo: cor 806, comprimento 333, volume 113, voltagem 93, memória 31, peso 25,
-potência 9, e 41 casamentos por EAN cujos nomes não têm nenhuma palavra em comum.
+agrupadas em 2019 em 4.030 grupos. Sem mudar nenhum parâmetro, **795 desses grupos seriam divididos**.
+Pares recusados, por motivo: tamanho de roupa ou calçado 2.792, cor 721, comprimento 330, lista de dimensões 323,
+quantidade 267, volume 113, voltagem 93, tela 43, memória 31, peso 25, potência 9, e 41 casamentos por EAN cujos
+nomes não têm nenhuma palavra em comum. A maior parte das recusas por tamanho é o mesmo calçado ou roupa em outro
+tamanho, que o catálogo de 2019 deixava numa página só; o DedupKit trata cada tamanho como um produto, como faz o EAN.
 
 | Regra | Anúncio A | Anúncio B | Motivo da recusa |
 |---|---|---|---|

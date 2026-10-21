@@ -36,6 +36,19 @@ public class BehaviourTests
     }
 
     [Fact]
+    public void AttributeRulesFoundOnRealPairs()
+    {
+        Assert.Null(ProductAttributes.Conflict("Forno 110V", "Forno 127V"));
+        Assert.Null(ProductAttributes.Conflict("Concha Inox", "Concha Prata"));
+        Assert.Equal("size: 38 vs 40", ProductAttributes.Conflict("Bota - 38 - Preto", "Bota - 40 - Preto"));
+        Assert.Equal("quantity: 3 vs 6", ProductAttributes.Conflict("Meia Kit 3 Pares", "Meia Kit 6 Pares"));
+        Assert.Equal("dimensions: 20x30 vs 30x40", ProductAttributes.Conflict("Quadro 20x30", "Quadro 30x40"));
+        Assert.Null(ProductAttributes.Conflict("Porta Escova 10,6 X 8,5 X 10,6 Cm", "Porta Escova 10,6x8,5cm"));
+        Assert.Null(ProductAttributes.Conflict("Toalha 1,50 x 2,00 m", "Toalha 150x200cm"));
+        Assert.Equal("screen_in: 55 vs 40", ProductAttributes.Conflict("TV 55\" Samsung", "TV 40\" Samsung"));
+    }
+
+    [Fact]
     public void DuplicateIdsAreRefused() =>
         Assert.Throws<ArgumentException>(() => Matcher.Match(new[] { new Record("1", "a"), new Record("1", "b") }));
 

@@ -138,15 +138,16 @@ GTIN length, and those still identify the product inside the catalog.
 
 ## 3. Attributes
 
-The name is folded as in 1.1 but keeping `.` and `,`, and spaces are collapsed.
+First, an inch mark after a digit becomes the word `pol`: `([0-9]) ?("|”|″|'')` → `$1pol ` (`TV 55"` is
+read as `55pol`). Then the name is folded as in 1.1 but keeping `.` and `,`, and spaces are collapsed.
 
-Measures: `(?<![a-z0-9])(?<![0-9][.,])(?<![0-9]x )(?<![0-9] x )([0-9]+(?:[.,][0-9]+)?) ?(unit)(?![a-z0-9])`, units tried longest first. The lookbehinds skip numbers that are part of a dimension list or a pack (`10,6x8,5cm`, `1,50 x 2,00 m`, `2 x 500ml`): the unit belongs to the whole list, so no single value is taken from it.
+Measures: `(?<![a-z0-9])(?<![0-9][.,])(?<![0-9]x )(?<![0-9] x )([0-9]+(?:[.,][0-9]+)?) ?(unit)(?![a-z0-9])`, units tried longest first. The lookbehinds skip numbers that are part of a dimension list or a pack (`10,6x8,5cm`, `1,50 x 2,00 m`, `2 x 500ml`): those are read as a dimension list below.
 
 | Dimension | Units (factor to the base unit) |
 |---|---|
 | `weight_kg` | kg, kgs (1); g, gr (0.001); mg (0.000001) |
 | `volume_l` | l, lt, litro, litros (1); ml (0.001) |
-| `voltage_v` | v (1) |
+| `voltage_v` | v (1); then 110, 115, 120 and 127 all become 127 (the same Brazilian network) |
 | `power_w` | w (1); kw (1000) |
 | `memory_gb` | gb (1); tb (1000); mb (0.001) |
 | `battery_mah` | mah (1) |
@@ -158,18 +159,40 @@ Number: a `.` followed by exactly three digits is a thousands separator (`12.000
 removed; then `,` becomes `.`. The value is multiplied by the factor in exact decimal arithmetic and
 written without trailing zeros (`500g` and `0,5 kg` both give `0.5`).
 
+`dimensions`: `(?<![a-z0-9.,])([0-9]+(?:[.,][0-9]+)?(?: ?x ?[0-9]+(?:[.,][0-9]+)?)+) ?(mm|cm|m)?(?![a-z0-9])`
+on the folded name. Each number is canonicalized as above (times 0.1, 1 or 100 when a unit is
+given) and the list is written `cm:160x80` with a unit or `20x30` without.
+
+`size` (clothing and shoes): on the name folded as in 1.1 but keeping `-`, `(` and `)`, with
+`S = (pp|p|m|g|gg|xg|xgg|eg|egg|xs|s|l|xl|xxl|[1-9]|[1-5][0-9])`, any of
+`(?<= )- S(?= -|$)` (`Bota - 38 - Preto`, `Camiseta - G`), `\b(?:tamanho|tam|talle|tamano) S\b` and
+`\(S\)`. The value is the matched size.
+
+`quantity` (packs): on the folded name with `.` and `,` turned into spaces, any of
+`\bkit (?:com |c )?([0-9]+)\b(?! em 1\b)`, `\b(?:c|com|cx c) ([0-9]+) (?:un|und|unid|unidade|unidades|peca|pecas|par|pares|pcs)\b`,
+`\b([0-9]+) (?:un|und|unid|unidades|pares|pcs)\b` and `\bpack (?:com |c )?([0-9]+)\b`. The value is
+the number without leading zeros (`0` if nothing is left). `Kit 4 em 1` is not a quantity.
+
 Words (the folded name with `.` and `,` turned into spaces):
 
 - colours, with feminine and plural-free variants mapped to one value: preto, branco, azul, vermelho,
-  verde, amarelo, rosa, cinza, grafite, inox, prata (prateado/a), dourado, cobre, bege, marrom, roxo,
-  laranja, chumbo, transparente, nude, lilas, vinho;
+  verde, amarelo, rosa, cinza, grafite, prata (prateado/a, inox, cromado/a), dourado, cobre, bege,
+  marrom, roxo, laranja, chumbo, transparente, nude, lilas, vinho. `cobre` is ignored when the name also
+  has the word `leito` ("cobre leito" is a bedspread, not a colour);
 - gender: masculino, feminino, infantil, unissex;
 - `bivolt` removes `voltage_v` (the product works on both).
 
-`conflict(a, b)`: for each dimension present in **both** names, in alphabetical order of the
-dimension, the first one whose value sets do not intersect is reported as
-`"<dimension>: <a values joined by /> vs <b values joined by />"`. `110V` against `110V 220V` is not a
-conflict. A dimension present in only one name is not a conflict.
+`conflict(a, b)`: for each attribute present in **both** names, in alphabetical order of the
+attribute, the first one that disagrees is reported as
+`"<attribute>: <a values joined by /> vs <b values joined by />"`. Values disagree when the two sets
+do not intersect (`110V` against `110V 220V` is not a conflict), except `dimensions`: two sets agree
+when some pair of lists is comparable (both with a unit, or both without) and one list starts with the
+other (`cm:10.6x8.5x10.6` and `cm:10.6x8.5`); when no pair is comparable, they agree. An attribute
+present in only one name is not a conflict.
+
+These rules were checked on 780 real pairs labelled by hand (see the product-matching pairs dataset):
+110/127 V, inox/prata, dimension lists, sizes and pack quantities were the most common causes of wrong
+answers before.
 
 ## 4. Matching
 

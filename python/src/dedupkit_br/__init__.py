@@ -14,7 +14,7 @@ from .evaluate import Scores, link_precision, pairwise, refused_that_were_right
 from .text import (STOPWORDS, fingerprint, legacy_fingerprint, ngram_fingerprint, normalize, normalize_url,
                    phonetic_key, phonetic_word, shares_word, singular, token_key, tokens)
 
-__version__ = "0.1.1"
+__version__ = "0.2.0"
 
 __all__ = [
     "DEFAULT_RULES", "LEGACY_RULES", "attributes", "conflict", "Link", "Record", "Rejected", "Result", "Rule", "STOPWORDS", "Scores",

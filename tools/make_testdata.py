@@ -27,7 +27,7 @@ TRICKY = [
     "Liquidificador Bivolt 1000W Preto", "Smartphone 128GB Azul 6,1 polegadas", "Tênis Masculino Preto/Branco 42",
     "Panela de Pressão 4,5L", "Kit 3 Pães de Queijo 500g", "TV 50\" 4K", "Livro - O Pequeno Príncipe (Edição de Bolso)",
     "Lençóis Casal 4 Peças", "LENCOL CASAL 4 PECAS", "Toalha de Mesa 1,50m", "Ar-Condicionado 12.000 BTUs", "Bateria 5000mAh",
-    "Porta Escova 10,6x8,5cm Verde", "Toalha 1,50 x 2,00 m", "Kit 2 x 500ml", "日本語 テキスト", "emoji 😀 teste", "x" * 300, "1 2 3 4 5", "Água Mineral 1,5 litros", "Óculos de Sol",
+    "Porta Escova 10,6x8,5cm Verde", "Toalha 1,50 x 2,00 m", "Kit 2 x 500ml", "Bota Ramarim Tachas - 40 - PRETO", "Camiseta M/L Basica - G", "Pulseira Galileo (M)", "Sapatênis R480 - Tamanho 38 - Marinho", "Meia Kit 3 Pares", "Lâmpada H4 Kit c/50", "Roldana 2 Un", "Kit 4 em 1", "Forno 110V", "Concha Inox Cromada", "TV 55\" Samsung", "Monitor 24” LED", "Quadro 20x30", "Tampo 160x80 Cm", "Colchão 193x203x22cm", "ZAPATILLAS Talle 31", "Kit 007 Peças", "Kit Cobre Leito Queen Marinho", "Pendente Cobre E27", "日本語 テキスト", "emoji 😀 teste", "x" * 300, "1 2 3 4 5", "Água Mineral 1,5 litros", "Óculos de Sol",
 ]
 WORDS = ["flores", "motores", "torres", "cofres", "animais", "papeis", "lencois", "fogoes", "paes", "maes", "tenis",
          "funis", "biquinis", "kits", "dvds", "luzes", "jardins", "cadeiras", "meses", "oculos", "lapis", "onibus",

@@ -28,8 +28,10 @@ implementations are checked against the same 448 texts and 8 matching configurat
   (`xuveiro` = `chuveiro`, `caçarola` = `cassarola`), and URLs without tracking parameters.
 - **Codes as stores fill them in:** GTIN check digit, placeholders (`SEM GTIN`, `0`, `7.89E+12`),
   long and short codes, and a blacklist of codes a store reuses for everything.
-- **Attribute check:** two listings are never merged when their names state different sizes,
-  weights, volumes, voltages, power, memory, colours or gender (`400g` vs `500g`, `110V` vs `220V`).
+- **Attribute check:** two listings are never merged when their names state different measures
+  (`400g` vs `500g`, `110V` vs `220V`, `20x30` vs `30x40`), memory, colours, gender, clothing or
+  shoe sizes (`- 38 -` vs `- 40 -`) or pack quantities (`Kit 3 Pares` vs `Kit 6 Pares`). It knows that
+  110 V and 127 V are the same Brazilian network and that inox, prata and cromado are one colour.
 - **Audit trail:** every link records the rule and value that made it, and every refused pair says why.
 
 ## Install
@@ -137,9 +139,11 @@ is off by default because real data broke it.
 
 [`evaluation/real_sample.py`](evaluation/real_sample.py) runs the attribute check on the 28,569 offers
 of the [catalog's public sample](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil),
-grouped in 2019 into 4,030 groups. Without changing any parameter, **762 of those groups would be
-split**. Pairs refused, by reason: colour 806, length 333, volume 113, voltage 93, memory 31,
-weight 25, power 9, and 41 barcode matches whose names share no word.
+grouped in 2019 into 4,030 groups. Without changing any parameter, **795 of those groups would be
+split**. Pairs refused, by reason: clothing or shoe size 2,792, colour 721, length 330, dimension list 323,
+pack quantity 267, volume 113, voltage 93, screen 43, memory 31, weight 25, power 9, and 41 barcode
+matches whose names share no word. Most size refusals are the same shoe or garment in another size, which
+the 2019 catalog kept on one page; DedupKit treats each size as its own product, as its barcode does.
 
 | Rule | Listing A | Listing B | Why refused |
 |---|---|---|---|

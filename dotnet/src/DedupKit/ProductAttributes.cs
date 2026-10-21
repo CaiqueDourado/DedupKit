@@ -26,9 +26,9 @@ public static class ProductAttributes
     {
         ["preto"] = "preto", ["preta"] = "preto", ["branco"] = "branco", ["branca"] = "branco", ["azul"] = "azul",
         ["vermelho"] = "vermelho", ["vermelha"] = "vermelho", ["verde"] = "verde", ["amarelo"] = "amarelo",
-        ["amarela"] = "amarelo", ["rosa"] = "rosa", ["cinza"] = "cinza", ["grafite"] = "grafite", ["inox"] = "inox",
-        ["prata"] = "prata", ["prateado"] = "prata", ["prateada"] = "prata", ["dourado"] = "dourado",
-        ["dourada"] = "dourado", ["cobre"] = "cobre", ["bege"] = "bege", ["marrom"] = "marrom", ["roxo"] = "roxo",
+        ["amarela"] = "amarelo", ["rosa"] = "rosa", ["cinza"] = "cinza", ["grafite"] = "grafite", ["inox"] = "prata",
+        ["prata"] = "prata", ["prateado"] = "prata", ["prateada"] = "prata", ["cromado"] = "prata", ["cromada"] = "prata",
+        ["dourado"] = "dourado", ["dourada"] = "dourado", ["cobre"] = "cobre", ["bege"] = "bege", ["marrom"] = "marrom", ["roxo"] = "roxo",
         ["roxa"] = "roxo", ["laranja"] = "laranja", ["chumbo"] = "chumbo", ["transparente"] = "transparente",
         ["nude"] = "nude", ["lilas"] = "lilas", ["vinho"] = "vinho",
     };
@@ -44,6 +44,67 @@ public static class ProductAttributes
         string.Join('|', Units.Select(u => u.Unit).OrderByDescending(u => u.Length)) +
         ")(?![a-z0-9])",
         RegexOptions.CultureInvariant | RegexOptions.Compiled);
+
+    // Clothing and shoe sizes: "Bota X - 38 - PRETO", "Camiseta - G", "Tamanho 40", "(M)"
+    private const string Sizes = "(pp|p|m|g|gg|xg|xgg|eg|egg|xs|s|l|xl|xxl|[1-9]|[1-5][0-9])";
+
+    private static readonly Regex Size = new(
+        "(?:(?<= )- " + Sizes + "(?= -|$)|\\b(?:tamanho|tam|talle|tamano) " + Sizes + "\\b|\\(" + Sizes + "\\))",
+        RegexOptions.CultureInvariant | RegexOptions.Compiled);
+
+    // Pack quantity: "Kit 3 Pares", "Kit c/ 50", "com 12 unidades", "2 Un"
+    private static readonly Regex Quantity = new(
+        "\\bkit (?:com |c )?([0-9]+)\\b(?! em 1\\b)|\\b(?:c|com|cx c) ([0-9]+) (?:un|und|unid|unidade|unidades|peca|pecas|par|pares|pcs)\\b" +
+        "|\\b([0-9]+) (?:un|und|unid|unidades|pares|pcs)\\b|\\bpack (?:com |c )?([0-9]+)\\b",
+        RegexOptions.CultureInvariant | RegexOptions.Compiled);
+
+    // Dimension lists: "20x30", "160x80 cm", "1,50 x 2,00 m" (values in cm when a unit is given)
+    private static readonly Regex Dimensions = new(
+        "(?<![a-z0-9.,])([0-9]+(?:[.,][0-9]+)?(?: ?x ?[0-9]+(?:[.,][0-9]+)?)+) ?(mm|cm|m)?(?![a-z0-9])",
+        RegexOptions.CultureInvariant | RegexOptions.Compiled);
+
+    private static readonly Regex Inch = new("([0-9]) ?(?:\"|\u201d|\u2033|'')", RegexOptions.CultureInvariant | RegexOptions.Compiled);
+
+    private static readonly HashSet<string> Voltage127 = new(new[] { "110", "115", "120", "127" }, StringComparer.Ordinal);
+
+    private static string FoldKeep(string? text)
+    {
+        var sb = new StringBuilder();
+        foreach (var ch in text ?? string.Empty)
+        {
+            if (FoldTable.Fold.TryGetValue(ch, out var mapped))
+            {
+                sb.Append(mapped);
+            }
+            else if (ch is >= 'A' and <= 'Z')
+            {
+                sb.Append((char)(ch + 32));
+            }
+            else if (ch is >= 'a' and <= 'z' or >= '0' and <= '9' or '-' or '(' or ')')
+            {
+                sb.Append(ch);
+            }
+            else
+            {
+                sb.Append(' ');
+            }
+        }
+
+        return string.Join(' ', sb.ToString().Split(' ', StringSplitOptions.RemoveEmptyEntries));
+    }
+
+    private static string FirstGroup(Match m)
+    {
+        for (var i = 1; i < m.Groups.Count; i++)
+        {
+            if (m.Groups[i].Success)
+            {
+                return m.Groups[i].Value;
+            }
+        }
+
+        return string.Empty;
+    }
 
     private static string Fold(string? text)
     {
@@ -90,6 +151,7 @@ public static class ProductAttributes
     /// </summary>
     public static IReadOnlyDictionary<string, IReadOnlySet<string>> Extract(string? text)
     {
+        text = Inch.Replace(text ?? string.Empty, "$1pol ");
         var folded = Fold(text);
         var found = new SortedDictionary<string, HashSet<string>>(StringComparer.Ordinal);
         foreach (Match m in Measure.Matches(folded))
@@ -104,13 +166,54 @@ public static class ProductAttributes
             set.Add(Canonical(m.Groups[1].Value, unit.Factor));
         }
 
+        if (found.TryGetValue("voltage_v", out var volts))
+        {
+            found["voltage_v"] = volts.Select(v => Voltage127.Contains(v) ? "127" : v).ToHashSet(StringComparer.Ordinal);
+        }
+
         var words = folded.Replace('.', ' ').Replace(',', ' ').Split(' ', StringSplitOptions.RemoveEmptyEntries).ToHashSet(StringComparer.Ordinal);
         if (words.Contains("bivolt"))
         {
             found.Remove("voltage_v");
         }
 
-        var colours = words.Where(Colours.ContainsKey).Select(w => Colours[w]).ToHashSet(StringComparer.Ordinal);
+        var sizes = Size.Matches(FoldKeep(text)).Select(FirstGroup).ToHashSet(StringComparer.Ordinal);
+        if (sizes.Count > 0)
+        {
+            found["size"] = sizes;
+        }
+
+        var dims = new HashSet<string>(StringComparer.Ordinal);
+        foreach (Match m in Dimensions.Matches(folded))
+        {
+            var parts = m.Groups[1].Value.Split('x').Select(p => p.Trim()).ToArray();
+            var unit = m.Groups[2].Success ? m.Groups[2].Value : string.Empty;
+            if (unit.Length > 0)
+            {
+                var factor = unit == "mm" ? 0.1m : unit == "cm" ? 1m : 100m;
+                dims.Add("cm:" + string.Join('x', parts.Select(p => Canonical(p, factor))));
+            }
+            else
+            {
+                dims.Add(string.Join('x', parts.Select(p => Canonical(p, 1m))));
+            }
+        }
+
+        if (dims.Count > 0)
+        {
+            found["dimensions"] = dims;
+        }
+
+        var plain = folded.Replace('.', ' ').Replace(',', ' ');
+        var quantities = Quantity.Matches(plain).Select(FirstGroup).Select(q => q.TrimStart('0') is { Length: > 0 } t ? t : "0")
+            .ToHashSet(StringComparer.Ordinal);
+        if (quantities.Count > 0)
+        {
+            found["quantity"] = quantities;
+        }
+
+        var colours = words.Where(w => Colours.ContainsKey(w) && !(w == "cobre" && words.Contains("leito")))
+            .Select(w => Colours[w]).ToHashSet(StringComparer.Ordinal);
         if (colours.Count > 0)
         {
             found["colour"] = colours;
@@ -136,7 +239,8 @@ public static class ProductAttributes
     {
         foreach (var dim in a.Keys.Intersect(b.Keys, StringComparer.Ordinal).OrderBy(k => k, StringComparer.Ordinal))
         {
-            if (!a[dim].Overlaps(b[dim]))
+            var agree = dim == "dimensions" ? DimensionsAgree(a[dim], b[dim]) : a[dim].Overlaps(b[dim]);
+            if (!agree)
             {
                 static string Join(IEnumerable<string> v) => string.Join('/', v.OrderBy(x => x, StringComparer.Ordinal));
                 return $"{dim}: {Join(a[dim])} vs {Join(b[dim])}";
@@ -144,5 +248,33 @@ public static class ProductAttributes
         }
 
         return null;
+    }
+
+    // Two sets of dimension lists agree when some comparable pair (both with a unit, or both without)
+    // has one list starting with the other. Pairs that cannot be compared are not a conflict.
+    private static bool DimensionsAgree(IReadOnlySet<string> a, IReadOnlySet<string> b)
+    {
+        var compared = false;
+        foreach (var x in a)
+        {
+            foreach (var y in b)
+            {
+                if (x.StartsWith("cm:", StringComparison.Ordinal) != y.StartsWith("cm:", StringComparison.Ordinal))
+                {
+                    continue;
+                }
+
+                compared = true;
+                var px = x.Split('x');
+                var py = y.Split('x');
+                var n = Math.Min(px.Length, py.Length);
+                if (px.Take(n).SequenceEqual(py.Take(n), StringComparer.Ordinal))
+                {
+                    return true;
+                }
+            }
+        }
+
+        return !compared;
     }
 }

@@ -238,10 +238,10 @@
    "phonetic": "JLDR BRSTMP FRST FR 375 INX 110V",
    "attributes": {
     "colour": [
-     "inox"
+     "prata"
     ],
     "voltage_v": [
-     "110"
+     "127"
     ],
     "volume_l": [
      "375"
@@ -249,7 +249,7 @@
    },
    "other": "Jeladeira Brastemp 375 L Branca 220 V",
    "shares_word": true,
-   "conflict": "colour: inox vs branco"
+   "conflict": "colour: prata vs branco"
   },
   {
    "text": "Jeladeira Brastemp 375 L Branca 220 V",
@@ -384,6 +384,9 @@
    "token_key": "3 500g kit pao queijo",
    "phonetic": "KT 3 PS D KJ 500G",
    "attributes": {
+    "quantity": [
+     "3"
+    ],
     "weight_kg": [
      "0.5"
     ]
@@ -401,7 +404,11 @@
    "ngram3": "04k504tv5v50",
    "token_key": "4k 50 tv",
    "phonetic": "TV 50 4K",
-   "attributes": {},
+   "attributes": {
+    "screen_in": [
+     "50"
+    ]
+   },
    "other": "Livro - O Pequeno Príncipe (Edição de Bolso)",
    "shares_word": false,
    "conflict": null
@@ -514,11 +521,14 @@
    "attributes": {
     "colour": [
      "verde"
+    ],
+    "dimensions": [
+     "cm:10.6x8.5"
     ]
    },
    "other": "Toalha 1,50 x 2,00 m",
    "shares_word": false,
-   "conflict": null
+   "conflict": "dimensions: cm:10.6x8.5 vs cm:150x200"
   },
   {
    "text": "Toalha 1,50 x 2,00 m",
@@ -529,7 +539,11 @@
    "ngram3": "00m0x215020050xa15alhha1lhaoaltoax20",
    "token_key": "00 1 2 50 m toalha x",
    "phonetic": "T1 1 50 X 2 00 M",
-   "attributes": {},
+   "attributes": {
+    "dimensions": [
+     "cm:150x200"
+    ]
+   },
    "other": "Kit 2 x 500ml",
    "shares_word": false,
    "conflict": null
@@ -543,7 +557,348 @@
    "ngram3": "00m0ml2x5500it2kitt2xx50",
    "token_key": "2 500ml kit x",
    "phonetic": "KT 2 X 500M",
+   "attributes": {
+    "quantity": [
+     "2"
+    ]
+   },
+   "other": "Bota Ramarim Tachas - 40 - PRETO",
+   "shares_word": false,
+   "conflict": null
+  },
+  {
+   "text": "Bota Ramarim Tachas - 40 - PRETO",
+   "normalize": "bota ramarim tachas 40 preto",
+   "fingerprint": "40 bota preto ramarim tachas",
+   "legacy_fingerprint": "40 preto tachas",
+   "ngram2": "0p40acamarasbochethaimmamtotprrareris4tato",
+   "ngram3": "0pr40pachamaaraarias4botchaetohasimtmarmtaotapreramretrims40tactar",
+   "token_key": "40 bota preto ramarim tacha",
+   "phonetic": "BT 2MRM TXS 40 PRT",
+   "attributes": {
+    "colour": [
+     "preto"
+    ],
+    "size": [
+     "40"
+    ]
+   },
+   "other": "Camiseta M/L Basica - G",
+   "shares_word": false,
+   "conflict": "size: 40 vs g"
+  },
+  {
+   "text": "Camiseta M/L Basica - G",
+   "normalize": "camiseta m l basica g",
+   "fingerprint": "basica camiseta g l m",
+   "legacy_fingerprint": "basica g m",
+   "ngram2": "agamasbacaeticislbmimlsesita",
+   "ngram3": "amiamlasibascagcametaicaiselbamismlbsetsictam",
+   "token_key": "basica camiseta g l m",
+   "phonetic": "KMZT M U BZK G",
+   "attributes": {
+    "size": [
+     "g"
+    ]
+   },
+   "other": "Pulseira Galileo (M)",
+   "shares_word": false,
+   "conflict": "size: g vs m"
+  },
+  {
+   "text": "Pulseira Galileo (M)",
+   "normalize": "pulseira galileo m",
+   "fingerprint": "galileo m pulseira",
+   "legacy_fingerprint": "galileo pulseira",
+   "ngram2": "agaleieogailirlelilsompuraseul",
+   "ngram3": "agaalieireomgalileiraleolillsepulragseiuls",
+   "token_key": "galileo m pulseira",
+   "phonetic": "PSR GL M",
+   "attributes": {
+    "size": [
+     "m"
+    ]
+   },
+   "other": "Sapatênis R480 - Tamanho 38 - Marinho",
+   "shares_word": false,
+   "conflict": "size: m vs 38"
+  },
+  {
+   "text": "Sapatênis R480 - Tamanho 38 - Marinho",
+   "normalize": "sapatenis r480 tamanho 38 marinho",
+   "fingerprint": "38 marinho r480 sapatenis tamanho",
+   "legacy_fingerprint": "38 r480 tamanho",
+   "ngram2": "0t3848808mamanaparatenhoinismanhnio3par4risasrtate",
+   "ngram3": "0ta38m48080t8maamaanhapaariateeniho3inhisrmanmarnhoniso38patr48rinsapsr4tamten",
+   "token_key": "38 marinho r480 sapatenil tamanho",
+   "phonetic": "SPTNS 2480 TM3 38 MR3",
+   "attributes": {
+    "size": [
+     "38"
+    ]
+   },
+   "other": "Meia Kit 3 Pares",
+   "shares_word": false,
+   "conflict": null
+  },
+  {
+   "text": "Meia Kit 3 Pares",
+   "normalize": "meia kit 3 pares",
+   "fingerprint": "3 kit meia pares",
+   "legacy_fingerprint": "3 meia ",
+   "ngram2": "3pakareiesiaitkimeparet3",
+   "ngram3": "3paakiareeiaiakit3kitmeiparrest3p",
+   "token_key": "3 kit meia par",
+   "phonetic": "M KT 3 PRS",
+   "attributes": {
+    "quantity": [
+     "3"
+    ]
+   },
+   "other": "Lâmpada H4 Kit c/50",
+   "shares_word": true,
+   "conflict": "quantity: 3 vs 50"
+  },
+  {
+   "text": "Lâmpada H4 Kit c/50",
+   "normalize": "lampada h4 kit c 50",
+   "fingerprint": "50 c h4 kit lampada",
+   "legacy_fingerprint": "50 h4 lampada",
+   "ngram2": "4k50adahamc5dah4itkilamppatc",
+   "ngram3": "4kiadaah4ampc50dahh4kitckitlammpapadtc5",
+   "token_key": "50 h4 kit lampada",
+   "phonetic": "LMPD 4 KT K 50",
+   "attributes": {
+    "quantity": [
+     "50"
+    ]
+   },
+   "other": "Roldana 2 Un",
+   "shares_word": false,
+   "conflict": "quantity: 50 vs 2"
+  },
+  {
+   "text": "Roldana 2 Un",
+   "normalize": "roldana 2 un",
+   "fingerprint": "2 roldana un",
+   "legacy_fingerprint": "2 un",
+   "ngram2": "2ua2andaldnaolroun",
+   "ngram3": "2una2uanadanldana2oldrol",
+   "token_key": "2 roldana un",
+   "phonetic": "2DN 2 UM",
+   "attributes": {
+    "quantity": [
+     "2"
+    ]
+   },
+   "other": "Kit 4 em 1",
+   "shares_word": false,
+   "conflict": null
+  },
+  {
+   "text": "Kit 4 em 1",
+   "normalize": "kit 4 em 1",
+   "fingerprint": "1 4 em kit",
+   "legacy_fingerprint": "1 em ",
+   "ngram2": "4eemitkim1t4",
+   "ngram3": "4emem1it4kitt4e",
+   "token_key": "1 4 kit",
+   "phonetic": "KT 4 EM 1",
    "attributes": {},
+   "other": "Forno 110V",
+   "shares_word": false,
+   "conflict": null
+  },
+  {
+   "text": "Forno 110V",
+   "normalize": "forno 110v",
+   "fingerprint": "110v forno",
+   "legacy_fingerprint": "110v ",
+   "ngram2": "0v1011fonoo1orrn",
+   "ngram3": "10v110forno1o11ornrno",
+   "token_key": "110v forno",
+   "phonetic": "FRN 110V",
+   "attributes": {
+    "voltage_v": [
+     "127"
+    ]
+   },
+   "other": "Concha Inox Cromada",
+   "shares_word": false,
+   "conflict": null
+  },
+  {
+   "text": "Concha Inox Cromada",
+   "normalize": "concha inox cromada",
+   "fingerprint": "concha cromada inox",
+   "legacy_fingerprint": "concha inox",
+   "ngram2": "adaichcocrdahainmancnoomonoxroxc",
+   "ngram3": "adaainchaconcrohaiinomadnchnoxomaoncoxcromxcr",
+   "token_key": "concha cromada inox",
+   "phonetic": "KMX INX KRMD",
+   "attributes": {
+    "colour": [
+     "prata"
+    ]
+   },
+   "other": "TV 55\" Samsung",
+   "shares_word": false,
+   "conflict": null
+  },
+  {
+   "text": "TV 55\" Samsung",
+   "normalize": "tv 55 samsung",
+   "fingerprint": "55 samsung tv",
+   "legacy_fingerprint": "55 tv",
+   "ngram2": "555sammsngsasutvunv5",
+   "ngram3": "55s5saamsmsusamsuntv5ungv55",
+   "token_key": "55 samsung tv",
+   "phonetic": "TV 55 SMSMG",
+   "attributes": {
+    "screen_in": [
+     "55"
+    ]
+   },
+   "other": "Monitor 24” LED",
+   "shares_word": false,
+   "conflict": "screen_in: 55 vs 24"
+  },
+  {
+   "text": "Monitor 24” LED",
+   "normalize": "monitor 24 led",
+   "fingerprint": "24 led monitor",
+   "legacy_fingerprint": "24 monitor",
+   "ngram2": "244leditlemonionorr2to",
+   "ngram3": "24l4leitoledmonnitonior2r24tor",
+   "token_key": "24 led monitor",
+   "phonetic": "MNTR 24 LD",
+   "attributes": {
+    "screen_in": [
+     "24"
+    ]
+   },
+   "other": "Quadro 20x30",
+   "shares_word": false,
+   "conflict": null
+  },
+  {
+   "text": "Quadro 20x30",
+   "normalize": "quadro 20x30",
+   "fingerprint": "20x30 quadro",
+   "legacy_fingerprint": "20x30 ",
+   "ngram2": "0x2030addro2qurouax3",
+   "ngram3": "0x320xadrdroo20quaro2uadx30",
+   "token_key": "20x30 quadro",
+   "phonetic": "KDR 20X30",
+   "attributes": {
+    "dimensions": [
+     "20x30"
+    ]
+   },
+   "other": "Tampo 160x80 Cm",
+   "shares_word": false,
+   "conflict": null
+  },
+  {
+   "text": "Tampo 160x80 Cm",
+   "normalize": "tampo 160x80 cm",
+   "fingerprint": "160x80 cm tampo",
+   "legacy_fingerprint": "160x80 tampo",
+   "ngram2": "0c0x166080amcmmpo1potax8",
+   "ngram3": "0cm0x816060x80campmpoo16po1tamx80",
+   "token_key": "160x80 cm tampo",
+   "phonetic": "TMP 160X80 KM",
+   "attributes": {
+    "dimensions": [
+     "cm:160x80"
+    ]
+   },
+   "other": "Colchão 193x203x22cm",
+   "shares_word": false,
+   "conflict": "dimensions: cm:160x80 vs cm:193x203x22"
+  },
+  {
+   "text": "Colchão 193x203x22cm",
+   "normalize": "colchao 193x203x22cm",
+   "fingerprint": "193x203x22cm colchao",
+   "legacy_fingerprint": "193x203x22cm ",
+   "ngram2": "031920222c3x93aochcmcohalco1olx2",
+   "ngram3": "03x19320322c2cm3x293xao1chacolhaolcho19olcx20x22",
+   "token_key": "193x203x22cm colchao",
+   "phonetic": "KX 193X203X22KM",
+   "attributes": {
+    "dimensions": [
+     "cm:193x203x22"
+    ]
+   },
+   "other": "ZAPATILLAS Talle 31",
+   "shares_word": false,
+   "conflict": null
+  },
+  {
+   "text": "ZAPATILLAS Talle 31",
+   "normalize": "zapatillas talle 31",
+   "fingerprint": "31 talle zapatillas",
+   "legacy_fingerprint": "31 zapatillas",
+   "ngram2": "31alapasate3illalellpasttatiza",
+   "ngram3": "allapaastatie31illlasle3llallepatstataltilzap",
+   "token_key": "31 talle zapatilla",
+   "phonetic": "ZPTLS TL 31",
+   "attributes": {
+    "size": [
+     "31"
+    ]
+   },
+   "other": "Kit 007 Peças",
+   "shares_word": false,
+   "conflict": null
+  },
+  {
+   "text": "Kit 007 Peças",
+   "normalize": "kit 007 pecas",
+   "fingerprint": "007 kit pecas",
+   "legacy_fingerprint": "007 pecas",
+   "ngram2": "00077pascaecitkipet0",
+   "ngram3": "00707p7pecasecait0kitpect00",
+   "token_key": "007 kit peca",
+   "phonetic": "KT 007 PS",
+   "attributes": {
+    "quantity": [
+     "7"
+    ]
+   },
+   "other": "Kit Cobre Leito Queen Marinho",
+   "shares_word": true,
+   "conflict": null
+  },
+  {
+   "text": "Kit Cobre Leito Queen Marinho",
+   "normalize": "kit cobre leito queen marinho",
+   "fingerprint": "cobre kit leito marinho queen",
+   "legacy_fingerprint": "cobre leito queen",
+   "ngram2": "arbrcoeeeielenhoinitkilemanhnmoboqqureritctoue",
+   "ngram3": "aribrecobeeneiteleenminhitcitokitleimarnhonmaobroququerelrintcotoquee",
+   "token_key": "cobre kit leito marinho queen",
+   "phonetic": "KT KBR LT KM MR3",
+   "attributes": {},
+   "other": "Pendente Cobre E27",
+   "shares_word": true,
+   "conflict": null
+  },
+  {
+   "text": "Pendente Cobre E27",
+   "normalize": "pendente cobre e27",
+   "fingerprint": "cobre e27 pendente",
+   "legacy_fingerprint": "cobre pendente",
+   "ngram2": "27brcodee2eceeenndntobperete",
+   "ngram3": "brecobdene27ecoee2endentndenteobrpenreetec",
+   "token_key": "cobre e27 pendente",
+   "phonetic": "PMDMT KBR E27",
+   "attributes": {
+    "colour": [
+     "cobre"
+    ]
+   },
    "other": "日本語 テキスト",
    "shares_word": false,
    "conflict": null
@@ -737,6 +1092,9 @@
     "memory_gb": [
      "16"
     ],
+    "screen_in": [
+     "4.7"
+    ],
     "weight_kg": [
      "0.004"
     ]
@@ -925,7 +1283,11 @@
    "ngram3": "1492lu41449s9suadaamparearidenelaeluendentepeetriarinait2kitlamlumlusminmpanarndenteo41ortpadpenporrepretriaro4rtestrsupt2lteltretroumiupoust",
    "token_key": "2 4149 kit lampada luminaria lustre pendente retro suporte",
    "phonetic": "KT 2 LSTR PMDMT LMNR 2TR 4149 SPRT LMPD",
-   "attributes": {},
+   "attributes": {
+    "quantity": [
+     "2"
+    ]
+   },
    "other": "Garrafa Squeeze Térmico Emborrachado 500ml Azul C22 Acte",
    "shares_word": false,
    "conflict": null
@@ -1046,7 +1408,11 @@
    "ngram3": "0x70x816060x80xaciadeaemamaantaomariarlcadcaocicdeddeidejdemdindo1edeedieirejaemmemoesahaeharicaindinhipiirajanliclinmacmadmedmesmmamolndonhantao16oliomepinramriprlisadtarx78x80",
    "token_key": "1 60x80x78 demolicao jantar linha macica madeira medindo mesa ripinha",
    "phonetic": "MZ D JMTR L3 2P3 EM MDR MS D DMLS MDMD 1 60X80X78",
-   "attributes": {},
+   "attributes": {
+    "dimensions": [
+     "1.6x80x78"
+    ]
+   },
    "other": "Óleo Motul Câmbio Automático Range Rover Sport 8 Marchas 12-17 (9 Litros)",
    "shares_word": false,
    "conflict": null
@@ -1323,7 +1689,7 @@
    },
    "other": "Acabamento para Registro Grande DK Cromado 4900.C16.GD Deca",
    "shares_word": false,
-   "conflict": null
+   "conflict": "colour: azul vs prata"
   },
   {
    "text": "Acabamento para Registro Grande DK Cromado 4900.C16.GD Deca",
@@ -1334,7 +1700,11 @@
    "ngram3": "00c0c116g4906gd900abaacaadoameandaraarebamc16cabcroddedecdeddkcdo4ecaedkegientgddgisgraistkcrmadmenndentoo49ogromaopaparranrarregrogromstrtoptro",
    "token_key": "4900 acabamento c16 cromado deca dk gd grande registro",
    "phonetic": "AKBMT PR 2JSTR GRMD DK KRMD 4900 K16 GD DK",
-   "attributes": {},
+   "attributes": {
+    "colour": [
+     "prata"
+    ]
+   },
    "other": "Chocolate Loov ao Leite de Coco - 25g - MO9618-1",
    "shares_word": false,
    "conflict": null
@@ -1760,6 +2130,9 @@
    "attributes": {
     "colour": [
      "preto"
+    ],
+    "size": [
+     "39"
     ]
    },
    "other": "Pano Alto Performance Banheiro Bettanin Esfrebom Bettanin",
@@ -1824,7 +2197,7 @@
    },
    "other": "Amassador de Batatas Utilita Inox e Roxo 28 Cm",
    "shares_word": false,
-   "conflict": "colour: vermelho vs inox/roxo"
+   "conflict": "colour: vermelho vs prata/roxo"
   },
   {
    "text": "Amassador de Batatas Utilita Inox e Roxo 28 Cm",
@@ -1837,7 +2210,7 @@
    "phonetic": "AMSDR D BTS UTLT INX E 2X 28 KM",
    "attributes": {
     "colour": [
-     "inox",
+     "prata",
      "roxo"
     ],
     "length_cm": [
@@ -2016,6 +2389,9 @@
     "gender": [
      "infantil",
      "masculino"
+    ],
+    "size": [
+     "4"
     ]
    },
    "other": "Painel Bancada Suspensa para TV Até 55 Pol. Marrocos Cinza/Preto - Poliman",
@@ -2070,6 +2446,9 @@
    "attributes": {
     "colour": [
      "preto"
+    ],
+    "quantity": [
+     "3"
     ]
    },
    "other": "Filtro Permanente Polipropile. H103 65701001i Electrolux/wap",
@@ -2116,11 +2495,14 @@
    "attributes": {
     "colour": [
      "amarelo"
+    ],
+    "size": [
+     "m"
     ]
    },
    "other": "Bota Jácomo Masculina BPM Fóssil 0741 - 37 - Marfim",
    "shares_word": false,
-   "conflict": null
+   "conflict": "size: m vs 37"
   },
   {
    "text": "Bota Jácomo Masculina BPM Fóssil 0741 - 37 - Marfim",
@@ -2134,6 +2516,9 @@
    "attributes": {
     "gender": [
      "masculino"
+    ],
+    "size": [
+     "37"
     ]
    },
    "other": "Disco de Freio Dianteiro Fremax BD3963 para Ford Focus 1.6, 2.0 2006 em Diante - Par",
@@ -2311,7 +2696,7 @@
    },
    "other": "Kit Cobre Leito Casal King Safari 07 Peças - Tabaco",
    "shares_word": false,
-   "conflict": "colour: verde vs cobre"
+   "conflict": null
   },
   {
    "text": "Kit Cobre Leito Casal King Safari 07 Peças - Tabaco",
@@ -2322,14 +2707,10 @@
    "ngram3": "07p7peabaacoafaalkariasaastbacbrecascobecaeitelefargsai07ingitcitokinkitleilkingsobrocapecrelri0safsalstatabtcotoc",
    "token_key": "07 casal cobre king kit leito peca safari tabaco",
    "phonetic": "KT KBR LT KZ KMG SFR 07 PS TBK",
-   "attributes": {
-    "colour": [
-     "cobre"
-    ]
-   },
+   "attributes": {},
    "other": "Blusão League Of Legends Miss Fortune Mafiosa Unissex com Capuz - P - Cinza",
    "shares_word": false,
-   "conflict": "colour: cobre vs cinza"
+   "conflict": null
   },
   {
    "text": "Blusão League Of Legends Miss Fortune Mafiosa Unissex com Capuz - P - Cinza",
@@ -2346,6 +2727,9 @@
     ],
     "gender": [
      "unissex"
+    ],
+    "size": [
+     "p"
     ]
    },
    "other": "8 Lamparina Navy Sortido Médio Decoração Festas",
@@ -2424,11 +2808,14 @@
     "gender": [
      "infantil",
      "masculino"
+    ],
+    "size": [
+     "6"
     ]
    },
    "other": "Capacete Axxis Eagle Logo com Viseira Cromada Inclusa - Preto/Vermelho/Amarelo",
    "shares_word": false,
-   "conflict": "colour: verde vs amarelo/preto/vermelho"
+   "conflict": "colour: verde vs amarelo/prata/preto/vermelho"
   },
   {
    "text": "Capacete Axxis Eagle Logo com Viseira Cromada Inclusa - Preto/Vermelho/Amarelo",
@@ -2442,13 +2829,14 @@
    "attributes": {
     "colour": [
      "amarelo",
+     "prata",
      "preto",
      "vermelho"
     ]
    },
    "other": "Cortina para Varão Simples Tecido Voil 2 Metros Manuela - Lilás/ Branco",
    "shares_word": false,
-   "conflict": "colour: amarelo/preto/vermelho vs branco/lilas"
+   "conflict": "colour: amarelo/prata/preto/vermelho vs branco/lilas"
   },
   {
    "text": "Cortina para Varão Simples Tecido Voil 2 Metros Manuela - Lilás/ Branco",
@@ -2495,11 +2883,14 @@
    "attributes": {
     "colour": [
      "azul"
+    ],
+    "size": [
+     "42"
     ]
    },
    "other": "Parachoque Traseiro Hilux 92 Até 04 Cromado",
    "shares_word": false,
-   "conflict": null
+   "conflict": "colour: azul vs prata"
   },
   {
    "text": "Parachoque Traseiro Hilux 92 Até 04 Cromado",
@@ -2510,10 +2901,14 @@
    "ngram3": "04c2at4cr92aachadoaraaseatechocroe04eiretrhilhoqiluiroluxmadohiomaoquparqueracrasrohromseite0trauetux9x92",
    "token_key": "04 92 ate cromado hilux parachoque traseiro",
    "phonetic": "PRXK TRZR ILX 92 AT 04 KRMD",
-   "attributes": {},
+   "attributes": {
+    "colour": [
+     "prata"
+    ]
+   },
    "other": "Copo On The Rocks Strauss 430 Ml 6 Peças Liso - Transparente",
    "shares_word": false,
-   "conflict": null
+   "conflict": "colour: prata vs transparente"
   },
   {
    "text": "Copo On The Rocks Strauss 430 Ml 6 Peças Liso - Transparente",
@@ -2577,7 +2972,11 @@
    "ngram3": "6laa6ladaadoafoalpampanoaraasibrecelciicricrodaselaepofoniinincinmistlaflamlanlpalucmadmcrmpancenmcnolnsoobroluomaonsorcpadparplaporra6rcrreprisromsinsobstataluci",
    "token_key": "6 cristal cromado incelano lampada luciin m plafon sobrepor",
    "phonetic": "PLFM SBRPR KRST PR 6 LMPDS IMSLN LSM M KRMD",
-   "attributes": {},
+   "attributes": {
+    "colour": [
+     "prata"
+    ]
+   },
    "other": "Breve Historia da Filosofia, uma",
    "shares_word": false,
    "conflict": null
@@ -2731,6 +3130,9 @@
    "attributes": {
     "colour": [
      "preto"
+    ],
+    "quantity": [
+     "3"
     ]
    },
    "other": "Kit Plafon Md-3003 Cone Pendente Cone Md-4048 Cupula Tecido",
@@ -2791,6 +3193,9 @@
    "attributes": {
     "colour": [
      "branco"
+    ],
+    "dimensions": [
+     "cm:50x16"
     ]
    },
    "other": "Pneu Maxxis 37x12,5 R17 Trepador M8060 124K 10 Lonas Mud",
@@ -2806,7 +3211,11 @@
    "ngram3": "0120600lo10l12412517t24k25r37x4k15r16017tr7x1806adoasmaxxdorepaeumis3k10lonm80maxmudnasneuonaormpadpner17reprm8s37smutreumax12xisxxi",
    "token_key": "10 124k 37x12 5 lona m8060 maxxis mud pneu r17 trepador",
    "phonetic": "PN MXS 37X12 5 217 TRPDR M8060 124K 10 LNS MD",
-   "attributes": {},
+   "attributes": {
+    "dimensions": [
+     "37x12.5"
+    ]
+   },
    "other": "Caixa Som Amplificada Bluetooth 80W Rms Mp3 Fm Usb Sd Aux Led Microfone Bivolt Amvox ACA 110 Black",
    "shares_word": false,
    "conflict": null
@@ -2892,7 +3301,11 @@
    "ngram3": "0110un10u1101toa1tacuadeagoakeallarabalcakcescupdaddeldesdocdraedoeedeloerpesdgonidakeellzlo0lzmmodnbanido01oceodeonboppparpcaperpperacragrpasdrtopuniupczmo",
    "token_key": "01 10 a1 ball cupcake doce dragon modelo topper unidade z",
    "phonetic": "A1 TPR PR KPK E DS DRGM BL S MDL 01 10 UNDS",
-   "attributes": {},
+   "attributes": {
+    "quantity": [
+     "10"
+    ]
+   },
    "other": "Contrabaixo Fender 019 5700 Am Deluxe Dimension Bass V Hh Rw Violin Burst",
    "shares_word": false,
    "conflict": null
@@ -2973,7 +3386,11 @@
    "ngram3": "16x6x1adrag1atibircordecdrodstecog16irdivoobiodeoraquaratrdsrodstatagtivuadvobx16",
    "token_key": "16x16 bird decorativo quadro tag",
    "phonetic": "KDR DKRTV BRDS TG 16X16",
-   "attributes": {},
+   "attributes": {
+    "dimensions": [
+     "16x16"
+    ]
+   },
    "other": "Antena Digital Extensor Digital Pdi Alcance 70 Km Capte K7 Turbo Amplificada",
    "shares_word": false,
    "conflict": null
@@ -3096,7 +3513,11 @@
    "ngram3": "0570x027057c70x7cmadealoapearebaldeadepdeseadedeeldepaes2esiivoldeloeobaoespapparpelreds27sivvobx05",
    "token_key": "2 57cm 70x0 adesivo balao papel parede",
    "phonetic": "P D PRD ADZV BLS 2 70X0 57KM",
-   "attributes": {},
+   "attributes": {
+    "dimensions": [
+     "cm:2.7x0.57"
+    ]
+   },
    "other": "Lowell Silver Slim Shampoo Desamarelador 240 Ml",
    "shares_word": false,
    "conflict": null
@@ -3146,7 +3567,11 @@
    "ngram3": "0120600lo10l12412517t24k25r37x4k15r16017tr7x1806adoasmaxxdorepaeumis3k10lonm80maxmudnasneuonaormpadpner17reprm8s37smutreumax12xisxxi",
    "token_key": "10 124k 37x12 5 lona m8060 maxxis mud pneu r17 trepador",
    "phonetic": "PN MXS 37X12 5 217 TRPDR M8060 124K 10 LNS MD",
-   "attributes": {},
+   "attributes": {
+    "dimensions": [
+     "37x12.5"
+    ]
+   },
    "other": "Mochila Feminina Reforçada Cavalera Notebook Floral Fashion Azul",
    "shares_word": false,
    "conflict": null
@@ -3202,6 +3627,9 @@
    "attributes": {
     "length_cm": [
      "13"
+    ],
+    "quantity": [
+     "40"
     ]
    },
    "other": "Buffet Pratic Classic com Pés Cromado 160 Cm Suede",
@@ -3218,13 +3646,16 @@
    "token_key": "160 buffet classic cm cromado pes pratic suede",
    "phonetic": "BFT PRTK KLSK KM PS KRMD 160 KM SD",
    "attributes": {
+    "colour": [
+     "prata"
+    ],
     "length_cm": [
      "160"
     ]
    },
    "other": "Jogo de Cama Casal Linha Rubi 150 Gsm Vermelho - DeMinas",
    "shares_word": false,
-   "conflict": null
+   "conflict": "colour: prata vs vermelho"
   },
   {
    "text": "Jogo de Cama Casal Linha Rubi 150 Gsm Vermelho - DeMinas",
@@ -3351,10 +3782,14 @@
    "ngram3": "6peanuc6pcancascondesdodec6ecaesiicoiliitckitlicnecnudodeonepecsiltcaudo",
    "token_key": "6 canudo kit peca silicone",
    "phonetic": "KT KND D SLKN K 6 PS",
-   "attributes": {},
+   "attributes": {
+    "quantity": [
+     "6"
+    ]
+   },
    "other": "Mini Personagem Decorativo Os Vingadores 3 - 41 unidades",
    "shares_word": false,
-   "conflict": null
+   "conflict": "quantity: 6 vs 41"
   },
   {
    "text": "Mini Personagem Decorativo Os Vingadores 3 - 41 unidades",
@@ -3365,7 +3800,11 @@
    "ngram3": "1un34141uadeadoageaticordaddecdesdorecoemderses3gadgemidainginiipeivomdeminnagnganidniponaoosoraoreosvperratresrsos34sonsvitivunivinvoo",
    "token_key": "3 41 decorativo mini personagem unidade vingador",
    "phonetic": "MN PRSNJM DKRTV OS VMGDRS 3 41 UNDS",
-   "attributes": {},
+   "attributes": {
+    "quantity": [
+     "41"
+    ]
+   },
    "other": "Pendente Alumínio - 3 Lâmpadas - Rosa - Sala Quarto",
    "shares_word": true,
    "conflict": null
@@ -3801,6 +4240,9 @@
     "colour": [
      "branco"
     ],
+    "quantity": [
+     "10"
+    ],
     "voltage_v": [
      "250"
     ]
@@ -3928,7 +4370,11 @@
    "ngram3": "00x0x1170200a20alhamacorhaminalhama2nalortrtitinx17",
    "token_key": "00 1 2 70 cortina lhama x",
    "phonetic": "KRTN 1M 2 00 X 1 70",
-   "attributes": {},
+   "attributes": {
+    "dimensions": [
+     "2x1.7"
+    ]
+   },
    "other": "Kit Veneza Super King Prata (07 peças)",
    "shares_word": false,
    "conflict": null
@@ -3960,7 +4406,11 @@
    "ngram3": "15m4x954x5ma7548758gd98gareas1azkdaseazk87marodarearods15x98zk8",
    "token_key": "15 4x98 875 gd marea roda zk",
    "phonetic": "2DS 15 MR ZK 875 4X98 GD",
-   "attributes": {},
+   "attributes": {
+    "dimensions": [
+     "4x98"
+    ]
+   },
    "other": "Combo Silencioso Uno Fire 1.0 8v 02/05",
    "shares_word": false,
    "conflict": null
@@ -4097,6 +4547,9 @@
    "attributes": {
     "colour": [
      "preto"
+    ],
+    "dimensions": [
+     "1800x900"
     ]
    },
    "other": "Silver Shadow Altitude Eau de Toilette Spray Perfume Masculino 100 ML-Davidoff",
@@ -4171,6 +4624,9 @@
    "attributes": {
     "colour": [
      "branco"
+    ],
+    "dimensions": [
+     "cm:11.4x16.2"
     ],
     "weight_kg": [
      "0.09"
@@ -4342,6 +4798,9 @@
    "attributes": {
     "colour": [
      "bege"
+    ],
+    "size": [
+     "42"
     ]
    },
    "other": "Raquete Babolat Aeropro Team GT L4",
@@ -4371,11 +4830,7 @@
    "ngram3": "06p6peadoalhalqasaasvblobrecascobcolcomdobecaeeneiteleencenverses0hesiraitoleilenlhalheloclpalqumlenconveoblobrocaocoolpomlpalpecqueradrelrsas06salsvitocueevervir",
    "token_key": "06 casal cobre doblo leito lencol palha peca queen versalhe vira",
    "phonetic": "KBR LT KZ KM VRS1S 06 PS VR DBL KM LMS P1",
-   "attributes": {
-    "colour": [
-     "cobre"
-    ]
-   },
+   "attributes": {},
    "other": "Quadro Pop Corn Retro",
    "shares_word": false,
    "conflict": null
@@ -4442,6 +4897,9 @@
    "attributes": {
     "gender": [
      "feminino"
+    ],
+    "size": [
+     "34"
     ]
    },
    "other": "Rodizio Giratório de Borracha com Freio Preto Médio 5 Capacidade 100kg Marcon RM-15",
@@ -4481,6 +4939,9 @@
    "attributes": {
     "colour": [
      "marrom"
+    ],
+    "size": [
+     "egg"
     ]
    },
    "other": "Guardanapos de Papel DPA Detetives do Prédio Azul 16 Unidades Festcolor",
@@ -4499,6 +4960,9 @@
    "attributes": {
     "colour": [
      "azul"
+    ],
+    "quantity": [
+     "16"
     ]
    },
    "other": "Absorvente Sym Noite e Dia Suave com Abas - Leve 16 Pague 14",
@@ -4581,6 +5045,9 @@
    "attributes": {
     "colour": [
      "azul"
+    ],
+    "dimensions": [
+     "cm:95x63"
     ]
    },
    "other": "Guarda Roupa Casal Sem Espelho 6 Portas 4 Gavetas Giovana Canela - Marrom",
@@ -4617,6 +5084,9 @@
    "attributes": {
     "colour": [
      "verde"
+    ],
+    "size": [
+     "36"
     ]
    },
    "other": "Kit 2 Chinelo Slide e Sapatênis Palmilha Macia Sola Borracha - 43 - PRETO",
@@ -4635,6 +5105,12 @@
    "attributes": {
     "colour": [
      "preto"
+    ],
+    "quantity": [
+     "2"
+    ],
+    "size": [
+     "43"
     ]
    },
    "other": "Smartphone LG Optimus L3 II Dual E435 Rosa com Dual Chip,Tela de 3,2”, Android 4.1, Câmera 3MP, 3G, Wi-Fi, FM, MP3 e Bluetooth - Tim",
@@ -4653,6 +5129,9 @@
    "attributes": {
     "colour": [
      "rosa"
+    ],
+    "screen_in": [
+     "3.2"
     ],
     "weight_kg": [
      "0.003"
@@ -4692,7 +5171,11 @@
    "ngram3": "14c1x121x4cmacaagnalealkariay2caccalcemchedardwaemmendenoetaetigneheniceiomitckitlacldwlenlkimagmetmmendanetnololdomaplariotaltchticwayx14y21",
    "token_key": "21x14 calendario cm kitchen magnetic metal oldway placa",
    "phonetic": "PLK KLMDR MGNTK EM MT KTXM ODV 21X14 KM",
-   "attributes": {},
+   "attributes": {
+    "dimensions": [
+     "cm:21x14"
+    ]
+   },
    "other": "Manta para Sofá Chenille Ambiance 140x200 Tabaco 1296 - Tabaco",
    "shares_word": false,
    "conflict": null
@@ -4706,7 +5189,11 @@
    "ngram3": "00t0ta0x212914020029640x6ta96tabaachacoambancantapaaraasobacbiace1checo1e14eamenifachenianillleallemanmbincenilntao12ofaparrassoftabtapx20",
    "token_key": "1296 140x200 ambiance chenille manta sofa tabaco",
    "phonetic": "MT PR SF XNL AMBMS 140X200 TBK 1296 TBK",
-   "attributes": {},
+   "attributes": {
+    "dimensions": [
+     "140x200"
+    ]
+   },
    "other": "Fone de Ouvido Angry Birds - Bomb",
    "shares_word": false,
    "conflict": null
@@ -5472,6 +5959,9 @@
    "token_key": "12 1l capilar escova hair kit professional progressiva shampoo tratamento zap",
    "phonetic": "ZP PRFSN AR KT 12 ESKVS PRGRSVS XMP 1 E TRTMT KPLR 1 ZP",
    "attributes": {
+    "quantity": [
+     "12"
+    ],
     "volume_l": [
      "1"
     ]
@@ -5492,6 +5982,9 @@
    "attributes": {
     "colour": [
      "preto"
+    ],
+    "dimensions": [
+     "2x0.75"
     ]
    },
    "other": "Manopla do Infinito Thanos Marvel Legends Hasbro",
@@ -6160,7 +6653,7 @@
      "branco"
     ],
     "voltage_v": [
-     "110"
+     "127"
     ],
     "volume_l": [
      "261"
@@ -6168,7 +6661,7 @@
    },
    "other": "Panasonic Geladeira Cycle Defrost 261L 220 220 V Inox",
    "shares_word": true,
-   "conflict": "colour: branco vs inox"
+   "conflict": "colour: branco vs prata"
   },
   {
    "text": "Panasonic Geladeira Cycle Defrost 261L 220 220 V Inox",
@@ -6181,7 +6674,7 @@
    "phonetic": "PNZNK JLDR SKL DFRST 261 220 220 V INX",
    "attributes": {
     "colour": [
-     "inox"
+     "prata"
     ],
     "voltage_v": [
      "220"
@@ -6192,7 +6685,7 @@
    },
    "other": "Geladeira Electrolux Duplex 340L 110 V Branca",
    "shares_word": true,
-   "conflict": "colour: inox vs branco"
+   "conflict": "colour: prata vs branco"
   },
   {
    "text": "Geladeira Electrolux Duplex 340L 110 V Branca",
@@ -6208,7 +6701,7 @@
      "branco"
     ],
     "voltage_v": [
-     "110"
+     "127"
     ],
     "volume_l": [
      "340"
@@ -6216,7 +6709,7 @@
    },
    "other": "Geladeira Duplex 340L 110 V Inox - Electrolux",
    "shares_word": true,
-   "conflict": "colour: branco vs inox"
+   "conflict": "colour: branco vs prata"
   },
   {
    "text": "Geladeira Duplex 340L 110 V Inox - Electrolux",
@@ -6229,10 +6722,10 @@
    "phonetic": "JLDR DPLX 340 110 V INX ELKTRLX",
    "attributes": {
     "colour": [
-     "inox"
+     "prata"
     ],
     "voltage_v": [
-     "110"
+     "127"
     ],
     "volume_l": [
      "340"
@@ -6253,10 +6746,10 @@
    "phonetic": "KMS JLDR SKL DFRST 261 110 V INX",
    "attributes": {
     "colour": [
-     "inox"
+     "prata"
     ],
     "voltage_v": [
-     "110"
+     "127"
     ],
     "volume_l": [
      "261"
@@ -6264,7 +6757,7 @@
    },
    "other": "GELADEIRA ELECTROLUX FROST FREE 375L 110V BRANCA",
    "shares_word": true,
-   "conflict": "colour: inox vs branco"
+   "conflict": "colour: prata vs branco"
   },
   {
    "text": "GELADEIRA ELECTROLUX FROST FREE 375L 110V BRANCA",
@@ -6280,7 +6773,7 @@
      "branco"
     ],
     "voltage_v": [
-     "110"
+     "127"
     ],
     "volume_l": [
      "375"
@@ -6288,7 +6781,7 @@
    },
    "other": "Geladeira Frost Free 375L 110 V Inox - Electrolux",
    "shares_word": true,
-   "conflict": "colour: branco vs inox"
+   "conflict": "colour: branco vs prata"
   },
   {
    "text": "Geladeira Frost Free 375L 110 V Inox - Electrolux",
@@ -6301,10 +6794,10 @@
    "phonetic": "JLDR FRST FR 375 110 V INX ELKTRLX",
    "attributes": {
     "colour": [
-     "inox"
+     "prata"
     ],
     "voltage_v": [
-     "110"
+     "127"
     ],
     "volume_l": [
      "375"
@@ -6325,10 +6818,10 @@
    "phonetic": "BRSTMP JLDR IMVRS 454 769 110 V INX",
    "attributes": {
     "colour": [
-     "inox"
+     "prata"
     ],
     "voltage_v": [
-     "110"
+     "127"
     ],
     "volume_l": [
      "454"
@@ -6336,7 +6829,7 @@
    },
    "other": "Geladeira Brastemp Cycle Defrost 261L 592 - 110v - Branca",
    "shares_word": true,
-   "conflict": "colour: inox vs branco"
+   "conflict": "colour: prata vs branco"
   },
   {
    "text": "Geladeira Brastemp Cycle Defrost 261L 592 - 110v - Branca",
@@ -6352,7 +6845,7 @@
      "branco"
     ],
     "voltage_v": [
-     "110"
+     "127"
     ],
     "volume_l": [
      "261"
@@ -6360,7 +6853,7 @@
    },
    "other": "Panasonic Geladeira Duplex 340L 220V Branca",
    "shares_word": true,
-   "conflict": "voltage_v: 110 vs 220"
+   "conflict": "voltage_v: 127 vs 220"
   },
   {
    "text": "Panasonic Geladeira Duplex 340L 220V Branca",
@@ -6384,7 +6877,7 @@
    },
    "other": "Panasonic Geladeira Duplex 340L 220V Inox",
    "shares_word": true,
-   "conflict": "colour: branco vs inox"
+   "conflict": "colour: branco vs prata"
   },
   {
    "text": "Panasonic Geladeira Duplex 340L 220V Inox",
@@ -6397,7 +6890,7 @@
    "phonetic": "PNZNK JLDR DPLX 340 220V INX",
    "attributes": {
     "colour": [
-     "inox"
+     "prata"
     ],
     "voltage_v": [
      "220"
@@ -6408,7 +6901,7 @@
    },
    "other": "GELADEIRA ELECTROLUX INVERSE 454L 876 220V BRANCA",
    "shares_word": true,
-   "conflict": "colour: inox vs branco"
+   "conflict": "colour: prata vs branco"
   },
   {
    "text": "GELADEIRA ELECTROLUX INVERSE 454L 876 220V BRANCA",
@@ -6432,7 +6925,7 @@
    },
    "other": "GELADEIRA ELECTROLUX INVERSE 454L 876 110V INOX",
    "shares_word": true,
-   "conflict": "colour: branco vs inox"
+   "conflict": "colour: branco vs prata"
   },
   {
    "text": "GELADEIRA ELECTROLUX INVERSE 454L 876 110V INOX",
@@ -6445,10 +6938,10 @@
    "phonetic": "JLDR ELKTRLX IMVRS 454 876 110V INX",
    "attributes": {
     "colour": [
-     "inox"
+     "prata"
     ],
     "voltage_v": [
-     "110"
+     "127"
     ],
     "volume_l": [
      "454"
@@ -6456,7 +6949,7 @@
    },
    "other": "GEALDEIRA BRASTEMP DUPLEX 340L 466 220V BRANCA",
    "shares_word": false,
-   "conflict": "colour: inox vs branco"
+   "conflict": "colour: prata vs branco"
   },
   {
    "text": "GEALDEIRA BRASTEMP DUPLEX 340L 466 220V BRANCA",
@@ -7605,7 +8098,7 @@
    },
    "other": "LIQUIDIFICADOR PHILCO POWER MAX 544 110V VERMELHO",
    "shares_word": false,
-   "conflict": "voltage_v: 127 vs 110"
+   "conflict": null
   },
   {
    "text": "LIQUIDIFICADOR PHILCO POWER MAX 544 110V VERMELHO",
@@ -7621,12 +8114,12 @@
      "vermelho"
     ],
     "voltage_v": [
-     "110"
+     "127"
     ]
    },
    "other": "Philco Liquidificador Power Max 544 220 V Vermelho Original",
    "shares_word": true,
-   "conflict": "voltage_v: 110 vs 220"
+   "conflict": "voltage_v: 127 vs 220"
   },
   {
    "text": "Philco Liquidificador Power Max 544 220 V Vermelho Original",
@@ -7684,7 +8177,7 @@
      "vermelho"
     ],
     "voltage_v": [
-     "110"
+     "127"
     ]
    },
    "other": "LIQUIDIFICADOR BRITANIA L-99 753 220 V PRETO",
@@ -7726,7 +8219,7 @@
      "vermelho"
     ],
     "voltage_v": [
-     "110"
+     "127"
     ]
    },
    "other": "Philco Liquidificaor L-99 820 110 V Preto Promoção",
@@ -7747,7 +8240,7 @@
      "preto"
     ],
     "voltage_v": [
-     "110"
+     "127"
     ]
    },
    "other": "Britânia Liquidificador L-99 110v Vermelho Novo",
@@ -7768,7 +8261,7 @@
      "vermelho"
     ],
     "voltage_v": [
-     "110"
+     "127"
     ]
    },
    "other": "Liquidiificador Britânia L-99 - 110 V - Preto",
@@ -7789,7 +8282,7 @@
      "preto"
     ],
     "voltage_v": [
-     "110"
+     "127"
     ]
    },
    "other": "LIQUIDIFICADOR MONDIAL TURBO POWER 370 220V VERMELHO",
@@ -7836,7 +8329,7 @@
    },
    "other": "Mondial Liquidificador Diamante 202 110V Vermelho",
    "shares_word": true,
-   "conflict": "voltage_v: 220 vs 110"
+   "conflict": "voltage_v: 220 vs 127"
   },
   {
    "text": "Mondial Liquidificador Diamante 202 110V Vermelho",
@@ -7852,7 +8345,7 @@
      "vermelho"
     ],
     "voltage_v": [
-     "110"
+     "127"
     ]
    },
    "other": "Liquidificador Diamante 202 220 V Preto - Mondial",
@@ -25108,14 +25601,14 @@
      "L00305",
      "code",
      "7890096168974",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00260",
      "L00308",
      "code",
      "7890096168974",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00313",
@@ -25290,7 +25783,7 @@
      "L00307",
      "code",
      "7890781497808",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00407",
@@ -25437,70 +25930,70 @@
      "L00815",
      "code",
      "7891872838708",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00767",
      "L00815",
      "code",
      "7891872838708",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00768",
      "L00815",
      "code",
      "7891872838708",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00770",
      "L00815",
      "code",
      "7891872838708",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00771",
      "L00815",
      "code",
      "7891872838708",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00244",
      "L00249",
      "code",
      "7891876286314",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00244",
      "L00251",
      "code",
      "7891876286314",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00244",
      "L00312",
      "code",
      "7891876286314",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00249",
      "L00312",
      "code",
      "7891876286314",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00251",
      "L00312",
      "code",
      "7891876286314",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00486",
@@ -26025,28 +26518,28 @@
      "L00318",
      "code",
      "7897950264971",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00250",
      "L00319",
      "code",
      "7897950264971",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00250",
      "L00320",
      "code",
      "7897950264971",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00250",
      "L00321",
      "code",
      "7897950264971",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00136",
@@ -26130,28 +26623,28 @@
      "L00301",
      "code",
      "7899058107099",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00258",
      "L00302",
      "code",
      "7899058107099",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00258",
      "L00303",
      "code",
      "7899058107099",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00258",
      "L00304",
      "code",
      "7899058107099",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00363",
@@ -26319,14 +26812,14 @@
      "L00243",
      "short_code_brand",
      "9867|panasonic",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00240",
      "L00243",
      "short_code_brand_ngram",
      "9867|anasicnanionpaso",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00604",
@@ -26669,112 +27162,112 @@
      "L00250",
      "image",
      "Geladeira-0-Branca@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00241",
      "L00250",
      "image",
      "Geladeira-0-Branca@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00242",
      "L00251",
      "image",
      "Geladeira-0-Branca@via",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00236",
      "L00247",
      "image",
      "Geladeira-0-Inox@via",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00237",
      "L00247",
      "image",
      "Geladeira-0-Inox@via",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00316",
      "L00324",
      "image",
      "Geladeira-10-Inox@b2w",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00316",
      "L00325",
      "image",
      "Geladeira-10-Inox@b2w",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00264",
      "L00267",
      "image",
      "Geladeira-2-Inox@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00264",
      "L00270",
      "image",
      "Geladeira-2-Inox@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00265",
      "L00267",
      "image",
      "Geladeira-2-Inox@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00265",
      "L00270",
      "image",
      "Geladeira-2-Inox@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00285",
      "L00290",
      "image",
      "Geladeira-4-Inox@b2w",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00285",
      "L00291",
      "image",
      "Geladeira-4-Inox@b2w",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00285",
      "L00820",
      "image",
      "Geladeira-4-Inox@b2w",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00729",
      "L00738",
      "image",
      "Liquidificador-1-Vermelho@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00729",
      "L00740",
      "image",
      "Liquidificador-1-Vermelho@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00501",
@@ -27012,28 +27505,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: preto vs inox"
+     "colour: preto vs prata"
     ],
     [
      "L00022",
      "L00269",
      "image",
      "no-photo",
-     "colour: preto vs inox"
+     "colour: preto vs prata"
     ],
     [
      "L00022",
      "L00288",
      "image",
      "no-photo",
-     "colour: preto vs inox"
+     "colour: preto vs prata"
     ],
     [
      "L00022",
      "L00292",
      "image",
      "no-photo",
-     "colour: preto vs inox"
+     "colour: preto vs prata"
     ],
     [
      "L00022",
@@ -27131,28 +27624,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00037",
      "L00269",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00037",
      "L00288",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00037",
      "L00292",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00037",
@@ -27278,28 +27771,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00088",
      "L00269",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00088",
      "L00288",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00088",
      "L00292",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00088",
@@ -27418,28 +27911,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00093",
      "L00269",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00093",
      "L00288",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00093",
      "L00292",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00093",
@@ -27558,28 +28051,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00102",
      "L00269",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00102",
      "L00288",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00102",
      "L00292",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00102",
@@ -27726,28 +28219,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00214",
      "L00269",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00214",
      "L00288",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00214",
      "L00292",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00214",
@@ -27866,7 +28359,7 @@
      "L00269",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00262",
@@ -27887,42 +28380,42 @@
      "L00355",
      "image",
      "no-photo",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00262",
      "L00383",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00408",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00412",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00262",
      "L00423",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00262",
      "L00471",
      "image",
      "no-photo",
-     "colour: inox vs grafite"
+     "colour: prata vs grafite"
     ],
     [
      "L00262",
@@ -27964,161 +28457,147 @@
      "L00556",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00566",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00262",
      "L00574",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00262",
      "L00585",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00588",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00620",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00262",
      "L00631",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
-    ],
-    [
-     "L00262",
-     "L00678",
-     "image",
-     "no-photo",
-     "voltage_v: 110 vs 127"
-    ],
-    [
-     "L00262",
-     "L00708",
-     "image",
-     "no-photo",
-     "voltage_v: 110 vs 127"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00262",
      "L00755",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00262",
      "L00784",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00796",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00262",
      "L00802",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00262",
      "L00807",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00810",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00269",
      "L00288",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00269",
      "L00292",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00269",
      "L00355",
      "image",
      "no-photo",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00269",
      "L00383",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00408",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00412",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00269",
      "L00423",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00269",
      "L00471",
      "image",
      "no-photo",
-     "colour: inox vs grafite"
+     "colour: prata vs grafite"
     ],
     [
      "L00269",
@@ -28160,35 +28639,35 @@
      "L00556",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00566",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00269",
      "L00574",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00269",
      "L00585",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00588",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
@@ -28209,84 +28688,84 @@
      "L00755",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00269",
      "L00784",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00796",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00269",
      "L00802",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00269",
      "L00807",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00810",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00288",
      "L00355",
      "image",
      "no-photo",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00288",
      "L00383",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00408",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00412",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00288",
      "L00423",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00288",
      "L00471",
      "image",
      "no-photo",
-     "colour: inox vs grafite"
+     "colour: prata vs grafite"
     ],
     [
      "L00288",
@@ -28328,147 +28807,133 @@
      "L00556",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00566",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00288",
      "L00574",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00288",
      "L00585",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00588",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00620",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00288",
      "L00631",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
-    ],
-    [
-     "L00288",
-     "L00678",
-     "image",
-     "no-photo",
-     "voltage_v: 110 vs 127"
-    ],
-    [
-     "L00288",
-     "L00708",
-     "image",
-     "no-photo",
-     "voltage_v: 110 vs 127"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00288",
      "L00755",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00288",
      "L00784",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00796",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00288",
      "L00802",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00288",
      "L00807",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00810",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00292",
      "L00355",
      "image",
      "no-photo",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00292",
      "L00383",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00408",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00412",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00292",
      "L00423",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00292",
      "L00471",
      "image",
      "no-photo",
-     "colour: inox vs grafite"
+     "colour: prata vs grafite"
     ],
     [
      "L00292",
@@ -28510,105 +28975,91 @@
      "L00556",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00566",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00292",
      "L00574",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00292",
      "L00585",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00588",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00620",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00292",
      "L00631",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
-    ],
-    [
-     "L00292",
-     "L00678",
-     "image",
-     "no-photo",
-     "voltage_v: 110 vs 127"
-    ],
-    [
-     "L00292",
-     "L00708",
-     "image",
-     "no-photo",
-     "voltage_v: 110 vs 127"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00292",
      "L00755",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00292",
      "L00784",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00796",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00292",
      "L00802",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00292",
      "L00807",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00810",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00355",
@@ -29378,28 +29829,28 @@
      "L00784",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00620",
      "L00796",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00620",
      "L00802",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00620",
      "L00807",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00631",
@@ -29420,28 +29871,28 @@
      "L00784",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00631",
      "L00796",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00631",
      "L00802",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00631",
      "L00807",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00678",
@@ -29449,34 +29900,6 @@
      "image",
      "no-photo",
      "voltage_v: 127 vs 220"
-    ],
-    [
-     "L00678",
-     "L00784",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
-    ],
-    [
-     "L00678",
-     "L00796",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
-    ],
-    [
-     "L00678",
-     "L00802",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
-    ],
-    [
-     "L00678",
-     "L00807",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
     ],
     [
      "L00678",
@@ -29491,34 +29914,6 @@
      "image",
      "no-photo",
      "voltage_v: 127 vs 220"
-    ],
-    [
-     "L00708",
-     "L00784",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
-    ],
-    [
-     "L00708",
-     "L00796",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
-    ],
-    [
-     "L00708",
-     "L00802",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
-    ],
-    [
-     "L00708",
-     "L00807",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
     ],
     [
      "L00708",
@@ -29539,14 +29934,14 @@
      "L00796",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00755",
      "L00802",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00755",
@@ -29588,7 +29983,7 @@
      "L00810",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00802",
@@ -29602,7 +29997,7 @@
      "L00810",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00807",
@@ -44271,14 +44666,14 @@
      "L00305",
      "code",
      "7890096168974",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00260",
      "L00308",
      "code",
      "7890096168974",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00313",
@@ -44453,7 +44848,7 @@
      "L00307",
      "code",
      "7890781497808",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00407",
@@ -44600,70 +44995,70 @@
      "L00815",
      "code",
      "7891872838708",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00767",
      "L00815",
      "code",
      "7891872838708",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00768",
      "L00815",
      "code",
      "7891872838708",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00770",
      "L00815",
      "code",
      "7891872838708",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00771",
      "L00815",
      "code",
      "7891872838708",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00244",
      "L00249",
      "code",
      "7891876286314",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00244",
      "L00251",
      "code",
      "7891876286314",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00244",
      "L00312",
      "code",
      "7891876286314",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00249",
      "L00312",
      "code",
      "7891876286314",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00251",
      "L00312",
      "code",
      "7891876286314",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00486",
@@ -45188,28 +45583,28 @@
      "L00318",
      "code",
      "7897950264971",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00250",
      "L00319",
      "code",
      "7897950264971",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00250",
      "L00320",
      "code",
      "7897950264971",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00250",
      "L00321",
      "code",
      "7897950264971",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00136",
@@ -45293,28 +45688,28 @@
      "L00301",
      "code",
      "7899058107099",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00258",
      "L00302",
      "code",
      "7899058107099",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00258",
      "L00303",
      "code",
      "7899058107099",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00258",
      "L00304",
      "code",
      "7899058107099",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00363",
@@ -45482,14 +45877,14 @@
      "L00243",
      "short_code_brand",
      "9867|panasonic",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00240",
      "L00243",
      "short_code_brand_ngram",
      "9867|anasicnanionpaso",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00604",
@@ -45832,112 +46227,112 @@
      "L00250",
      "image",
      "Geladeira-0-Branca@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00241",
      "L00250",
      "image",
      "Geladeira-0-Branca@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00242",
      "L00251",
      "image",
      "Geladeira-0-Branca@via",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00236",
      "L00247",
      "image",
      "Geladeira-0-Inox@via",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00237",
      "L00247",
      "image",
      "Geladeira-0-Inox@via",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00316",
      "L00324",
      "image",
      "Geladeira-10-Inox@b2w",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00316",
      "L00325",
      "image",
      "Geladeira-10-Inox@b2w",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00264",
      "L00267",
      "image",
      "Geladeira-2-Inox@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00264",
      "L00270",
      "image",
      "Geladeira-2-Inox@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00265",
      "L00267",
      "image",
      "Geladeira-2-Inox@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00265",
      "L00270",
      "image",
      "Geladeira-2-Inox@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00285",
      "L00290",
      "image",
      "Geladeira-4-Inox@b2w",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00285",
      "L00291",
      "image",
      "Geladeira-4-Inox@b2w",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00285",
      "L00820",
      "image",
      "Geladeira-4-Inox@b2w",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00729",
      "L00738",
      "image",
      "Liquidificador-1-Vermelho@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00729",
      "L00740",
      "image",
      "Liquidificador-1-Vermelho@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00501",
@@ -46175,28 +46570,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: preto vs inox"
+     "colour: preto vs prata"
     ],
     [
      "L00022",
      "L00269",
      "image",
      "no-photo",
-     "colour: preto vs inox"
+     "colour: preto vs prata"
     ],
     [
      "L00022",
      "L00288",
      "image",
      "no-photo",
-     "colour: preto vs inox"
+     "colour: preto vs prata"
     ],
     [
      "L00022",
      "L00292",
      "image",
      "no-photo",
-     "colour: preto vs inox"
+     "colour: preto vs prata"
     ],
     [
      "L00022",
@@ -46294,28 +46689,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00037",
      "L00269",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00037",
      "L00288",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00037",
      "L00292",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00037",
@@ -46441,28 +46836,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00088",
      "L00269",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00088",
      "L00288",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00088",
      "L00292",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00088",
@@ -46581,28 +46976,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00093",
      "L00269",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00093",
      "L00288",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00093",
      "L00292",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00093",
@@ -46721,28 +47116,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00102",
      "L00269",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00102",
      "L00288",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00102",
      "L00292",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00102",
@@ -46889,28 +47284,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00214",
      "L00269",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00214",
      "L00288",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00214",
      "L00292",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00214",
@@ -47029,7 +47424,7 @@
      "L00269",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00262",
@@ -47050,42 +47445,42 @@
      "L00355",
      "image",
      "no-photo",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00262",
      "L00383",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00408",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00412",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00262",
      "L00423",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00262",
      "L00471",
      "image",
      "no-photo",
-     "colour: inox vs grafite"
+     "colour: prata vs grafite"
     ],
     [
      "L00262",
@@ -47127,161 +47522,147 @@
      "L00556",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00566",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00262",
      "L00574",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00262",
      "L00585",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00588",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00620",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00262",
      "L00631",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
-    ],
-    [
-     "L00262",
-     "L00678",
-     "image",
-     "no-photo",
-     "voltage_v: 110 vs 127"
-    ],
-    [
-     "L00262",
-     "L00708",
-     "image",
-     "no-photo",
-     "voltage_v: 110 vs 127"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00262",
      "L00755",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00262",
      "L00784",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00796",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00262",
      "L00802",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00262",
      "L00807",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00810",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00269",
      "L00288",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00269",
      "L00292",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00269",
      "L00355",
      "image",
      "no-photo",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00269",
      "L00383",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00408",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00412",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00269",
      "L00423",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00269",
      "L00471",
      "image",
      "no-photo",
-     "colour: inox vs grafite"
+     "colour: prata vs grafite"
     ],
     [
      "L00269",
@@ -47323,35 +47704,35 @@
      "L00556",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00566",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00269",
      "L00574",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00269",
      "L00585",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00588",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
@@ -47372,84 +47753,84 @@
      "L00755",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00269",
      "L00784",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00796",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00269",
      "L00802",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00269",
      "L00807",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00810",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00288",
      "L00355",
      "image",
      "no-photo",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00288",
      "L00383",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00408",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00412",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00288",
      "L00423",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00288",
      "L00471",
      "image",
      "no-photo",
-     "colour: inox vs grafite"
+     "colour: prata vs grafite"
     ],
     [
      "L00288",
@@ -47491,147 +47872,133 @@
      "L00556",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00566",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00288",
      "L00574",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00288",
      "L00585",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00588",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00620",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00288",
      "L00631",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
-    ],
-    [
-     "L00288",
-     "L00678",
-     "image",
-     "no-photo",
-     "voltage_v: 110 vs 127"
-    ],
-    [
-     "L00288",
-     "L00708",
-     "image",
-     "no-photo",
-     "voltage_v: 110 vs 127"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00288",
      "L00755",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00288",
      "L00784",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00796",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00288",
      "L00802",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00288",
      "L00807",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00810",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00292",
      "L00355",
      "image",
      "no-photo",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00292",
      "L00383",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00408",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00412",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00292",
      "L00423",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00292",
      "L00471",
      "image",
      "no-photo",
-     "colour: inox vs grafite"
+     "colour: prata vs grafite"
     ],
     [
      "L00292",
@@ -47673,105 +48040,91 @@
      "L00556",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00566",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00292",
      "L00574",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00292",
      "L00585",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00588",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00620",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00292",
      "L00631",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
-    ],
-    [
-     "L00292",
-     "L00678",
-     "image",
-     "no-photo",
-     "voltage_v: 110 vs 127"
-    ],
-    [
-     "L00292",
-     "L00708",
-     "image",
-     "no-photo",
-     "voltage_v: 110 vs 127"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00292",
      "L00755",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00292",
      "L00784",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00796",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00292",
      "L00802",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00292",
      "L00807",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00810",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00355",
@@ -48541,28 +48894,28 @@
      "L00784",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00620",
      "L00796",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00620",
      "L00802",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00620",
      "L00807",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00631",
@@ -48583,28 +48936,28 @@
      "L00784",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00631",
      "L00796",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00631",
      "L00802",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00631",
      "L00807",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00678",
@@ -48612,34 +48965,6 @@
      "image",
      "no-photo",
      "voltage_v: 127 vs 220"
-    ],
-    [
-     "L00678",
-     "L00784",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
-    ],
-    [
-     "L00678",
-     "L00796",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
-    ],
-    [
-     "L00678",
-     "L00802",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
-    ],
-    [
-     "L00678",
-     "L00807",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
     ],
     [
      "L00678",
@@ -48654,34 +48979,6 @@
      "image",
      "no-photo",
      "voltage_v: 127 vs 220"
-    ],
-    [
-     "L00708",
-     "L00784",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
-    ],
-    [
-     "L00708",
-     "L00796",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
-    ],
-    [
-     "L00708",
-     "L00802",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
-    ],
-    [
-     "L00708",
-     "L00807",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
     ],
     [
      "L00708",
@@ -48702,14 +48999,14 @@
      "L00796",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00755",
      "L00802",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00755",
@@ -48751,7 +49048,7 @@
      "L00810",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00802",
@@ -48765,7 +49062,7 @@
      "L00810",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00807",
@@ -63258,14 +63555,14 @@
      "L00305",
      "code",
      "7890096168974",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00260",
      "L00308",
      "code",
      "7890096168974",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00313",
@@ -63454,7 +63751,7 @@
      "L00307",
      "code",
      "7890781497808",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00407",
@@ -63601,70 +63898,70 @@
      "L00815",
      "code",
      "7891872838708",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00767",
      "L00815",
      "code",
      "7891872838708",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00768",
      "L00815",
      "code",
      "7891872838708",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00770",
      "L00815",
      "code",
      "7891872838708",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00771",
      "L00815",
      "code",
      "7891872838708",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00244",
      "L00249",
      "code",
      "7891876286314",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00244",
      "L00251",
      "code",
      "7891876286314",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00244",
      "L00312",
      "code",
      "7891876286314",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00249",
      "L00312",
      "code",
      "7891876286314",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00251",
      "L00312",
      "code",
      "7891876286314",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00486",
@@ -64210,28 +64507,28 @@
      "L00318",
      "code",
      "7897950264971",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00250",
      "L00319",
      "code",
      "7897950264971",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00250",
      "L00320",
      "code",
      "7897950264971",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00250",
      "L00321",
      "code",
      "7897950264971",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00136",
@@ -64315,28 +64612,28 @@
      "L00301",
      "code",
      "7899058107099",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00258",
      "L00302",
      "code",
      "7899058107099",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00258",
      "L00303",
      "code",
      "7899058107099",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00258",
      "L00304",
      "code",
      "7899058107099",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00363",
@@ -64504,14 +64801,14 @@
      "L00243",
      "short_code_brand",
      "9867|panasonic",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00240",
      "L00243",
      "short_code_brand_ngram",
      "9867|anasicnanionpaso",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00604",
@@ -64854,112 +65151,112 @@
      "L00250",
      "image",
      "Geladeira-0-Branca@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00241",
      "L00250",
      "image",
      "Geladeira-0-Branca@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00242",
      "L00251",
      "image",
      "Geladeira-0-Branca@via",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00236",
      "L00247",
      "image",
      "Geladeira-0-Inox@via",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00237",
      "L00247",
      "image",
      "Geladeira-0-Inox@via",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00316",
      "L00324",
      "image",
      "Geladeira-10-Inox@b2w",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00316",
      "L00325",
      "image",
      "Geladeira-10-Inox@b2w",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00264",
      "L00267",
      "image",
      "Geladeira-2-Inox@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00264",
      "L00270",
      "image",
      "Geladeira-2-Inox@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00265",
      "L00267",
      "image",
      "Geladeira-2-Inox@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00265",
      "L00270",
      "image",
      "Geladeira-2-Inox@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00285",
      "L00290",
      "image",
      "Geladeira-4-Inox@b2w",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00285",
      "L00291",
      "image",
      "Geladeira-4-Inox@b2w",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00285",
      "L00820",
      "image",
      "Geladeira-4-Inox@b2w",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00729",
      "L00738",
      "image",
      "Liquidificador-1-Vermelho@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00729",
      "L00740",
      "image",
      "Liquidificador-1-Vermelho@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00501",
@@ -65197,28 +65494,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: preto vs inox"
+     "colour: preto vs prata"
     ],
     [
      "L00022",
      "L00269",
      "image",
      "no-photo",
-     "colour: preto vs inox"
+     "colour: preto vs prata"
     ],
     [
      "L00022",
      "L00288",
      "image",
      "no-photo",
-     "colour: preto vs inox"
+     "colour: preto vs prata"
     ],
     [
      "L00022",
      "L00292",
      "image",
      "no-photo",
-     "colour: preto vs inox"
+     "colour: preto vs prata"
     ],
     [
      "L00022",
@@ -65330,28 +65627,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00037",
      "L00269",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00037",
      "L00288",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00037",
      "L00292",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00037",
@@ -65526,28 +65823,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00088",
      "L00269",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00088",
      "L00288",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00088",
      "L00292",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00088",
@@ -65680,28 +65977,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00093",
      "L00269",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00093",
      "L00288",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00093",
      "L00292",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00093",
@@ -65890,28 +66187,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00102",
      "L00269",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00102",
      "L00288",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00102",
      "L00292",
      "image",
      "no-photo",
-     "colour: azul vs inox"
+     "colour: azul vs prata"
     ],
     [
      "L00102",
@@ -66408,28 +66705,28 @@
      "L00262",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00214",
      "L00269",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00214",
      "L00288",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00214",
      "L00292",
      "image",
      "no-photo",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00214",
@@ -66548,7 +66845,7 @@
      "L00269",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00262",
@@ -66569,42 +66866,42 @@
      "L00355",
      "image",
      "no-photo",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00262",
      "L00383",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00408",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00412",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00262",
      "L00423",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00262",
      "L00471",
      "image",
      "no-photo",
-     "colour: inox vs grafite"
+     "colour: prata vs grafite"
     ],
     [
      "L00262",
@@ -66646,161 +66943,154 @@
      "L00556",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00566",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00262",
      "L00574",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00262",
      "L00585",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00588",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00620",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00262",
      "L00631",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00262",
      "L00678",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 127"
-    ],
-    [
-     "L00262",
-     "L00708",
-     "image",
-     "no-photo",
-     "voltage_v: 110 vs 127"
+     "brand: consul vs zagonel"
     ],
     [
      "L00262",
      "L00755",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00262",
      "L00784",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00796",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00262",
      "L00802",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00262",
      "L00807",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00262",
      "L00810",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00269",
      "L00288",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00269",
      "L00292",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00269",
      "L00355",
      "image",
      "no-photo",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00269",
      "L00383",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00408",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00412",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00269",
      "L00423",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00269",
      "L00471",
      "image",
      "no-photo",
-     "colour: inox vs grafite"
+     "colour: prata vs grafite"
     ],
     [
      "L00269",
@@ -66842,35 +67132,35 @@
      "L00556",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00566",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00269",
      "L00574",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00269",
      "L00585",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00588",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
@@ -66891,84 +67181,84 @@
      "L00755",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00269",
      "L00784",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00796",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00269",
      "L00802",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00269",
      "L00807",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00269",
      "L00810",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00288",
      "L00355",
      "image",
      "no-photo",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00288",
      "L00383",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00408",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00412",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00288",
      "L00423",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00288",
      "L00471",
      "image",
      "no-photo",
-     "colour: inox vs grafite"
+     "colour: prata vs grafite"
     ],
     [
      "L00288",
@@ -67010,147 +67300,140 @@
      "L00556",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00566",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00288",
      "L00574",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00288",
      "L00585",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00588",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00620",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00288",
      "L00631",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00288",
      "L00678",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 127"
-    ],
-    [
-     "L00288",
-     "L00708",
-     "image",
-     "no-photo",
-     "voltage_v: 110 vs 127"
+     "brand: brastemp vs zagonel"
     ],
     [
      "L00288",
      "L00755",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00288",
      "L00784",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00796",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00288",
      "L00802",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00288",
      "L00807",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00288",
      "L00810",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00292",
      "L00355",
      "image",
      "no-photo",
-     "colour: inox vs branco"
+     "colour: prata vs branco"
     ],
     [
      "L00292",
      "L00383",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00408",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00412",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00292",
      "L00423",
      "image",
      "no-photo",
-     "colour: inox vs azul"
+     "colour: prata vs azul"
     ],
     [
      "L00292",
      "L00471",
      "image",
      "no-photo",
-     "colour: inox vs grafite"
+     "colour: prata vs grafite"
     ],
     [
      "L00292",
@@ -67192,105 +67475,98 @@
      "L00556",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00566",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00292",
      "L00574",
      "image",
      "no-photo",
-     "colour: inox vs cinza"
+     "colour: prata vs cinza"
     ],
     [
      "L00292",
      "L00585",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00588",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00620",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00292",
      "L00631",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00292",
      "L00678",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 127"
-    ],
-    [
-     "L00292",
-     "L00708",
-     "image",
-     "no-photo",
-     "voltage_v: 110 vs 127"
+     "brand: brastemp vs zagonel"
     ],
     [
      "L00292",
      "L00755",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00292",
      "L00784",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00796",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00292",
      "L00802",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00292",
      "L00807",
      "image",
      "no-photo",
-     "colour: inox vs preto"
+     "colour: prata vs preto"
     ],
     [
      "L00292",
      "L00810",
      "image",
      "no-photo",
-     "colour: inox vs vermelho"
+     "colour: prata vs vermelho"
     ],
     [
      "L00355",
@@ -68662,28 +68938,28 @@
      "L00784",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00620",
      "L00796",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00620",
      "L00802",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00620",
      "L00807",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00620",
@@ -68718,28 +68994,28 @@
      "L00784",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00631",
      "L00796",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00631",
      "L00802",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00631",
      "L00807",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00631",
@@ -68760,28 +69036,14 @@
      "L00784",
      "image",
      "no-photo",
-     "voltage_v: 127 vs 110"
-    ],
-    [
-     "L00678",
-     "L00796",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
+     "brand: zagonel vs britania"
     ],
     [
      "L00678",
      "L00802",
      "image",
      "no-photo",
-     "voltage_v: 127 vs 110"
-    ],
-    [
-     "L00678",
-     "L00807",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
+     "brand: zagonel vs mondial"
     ],
     [
      "L00678",
@@ -68796,34 +69058,6 @@
      "image",
      "no-photo",
      "voltage_v: 127 vs 220"
-    ],
-    [
-     "L00708",
-     "L00784",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
-    ],
-    [
-     "L00708",
-     "L00796",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
-    ],
-    [
-     "L00708",
-     "L00802",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
-    ],
-    [
-     "L00708",
-     "L00807",
-     "image",
-     "no-photo",
-     "voltage_v: 127 vs 110"
     ],
     [
      "L00708",
@@ -68844,14 +69078,14 @@
      "L00796",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00755",
      "L00802",
      "image",
      "no-photo",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00755",
@@ -68900,7 +69134,7 @@
      "L00810",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00802",
@@ -68914,7 +69148,7 @@
      "L00810",
      "image",
      "no-photo",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00807",
@@ -82457,14 +82691,14 @@
      "L00305",
      "code",
      "7890096168974",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00260",
      "L00308",
      "code",
      "7890096168974",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00343",
@@ -82492,7 +82726,7 @@
      "L00307",
      "code",
      "7890781497808",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00407",
@@ -82765,14 +82999,14 @@
      "L00243",
      "short_code_brand",
      "9867|panasonic",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00240",
      "L00243",
      "short_code_brand_ngram",
      "9867|anasicnanionpaso",
-     "colour: branco vs inox"
+     "colour: branco vs prata"
     ],
     [
      "L00604",
@@ -82898,63 +83132,63 @@
      "L00250",
      "image",
      "Geladeira-0-Branca@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00241",
      "L00250",
      "image",
      "Geladeira-0-Branca@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00242",
      "L00251",
      "image",
      "Geladeira-0-Branca@via",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00236",
      "L00247",
      "image",
      "Geladeira-0-Inox@via",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00237",
      "L00247",
      "image",
      "Geladeira-0-Inox@via",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00316",
      "L00324",
      "image",
      "Geladeira-10-Inox@b2w",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00316",
      "L00325",
      "image",
      "Geladeira-10-Inox@b2w",
-     "voltage_v: 220 vs 110"
+     "voltage_v: 220 vs 127"
     ],
     [
      "L00729",
      "L00738",
      "image",
      "Liquidificador-1-Vermelho@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00729",
      "L00740",
      "image",
      "Liquidificador-1-Vermelho@b2w",
-     "voltage_v: 110 vs 220"
+     "voltage_v: 127 vs 220"
     ],
     [
      "L00501",
