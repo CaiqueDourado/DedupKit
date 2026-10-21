@@ -157,6 +157,14 @@ No catálogo antigo, cada um desses pares era uma única página de produto. O c
 6.729 pares na mesma amostra, a maioria corretos, porque os marketplaces preenchem o campo marca com o nome
 do vendedor. Ligue (`check_brands=True`) só quando o seu campo de marca for limpo.
 
+### Conferido par a par
+
+O [dataset de pares para matching](https://github.com/CaiqueDourado/pares-matching-produtos-ptbr) tem 780 pares candidatos do catálogo conferidos um a um, no nível de SKU.
+Juntar todo candidato, como fazia o catálogo de 2019, dá 25% de precisão; as conferências de palavra e atributos do
+DedupKit dão **47% de precisão com 91% de cobertura**; somando uma conferência de número de modelo (TB125 × TB112,
+PS3 × PS4), 83% com 68%. As regras de atributos da 0.2.0 (tamanhos, quantidades, listas de dimensões, 110 = 127 V)
+foram escritas a partir dos erros encontrados nesses pares.
+
 ## A história
 
 O catálogo juntava ofertas de dezenas de lojas com uma rotina em SQL Server (2020–2022) sobre doze

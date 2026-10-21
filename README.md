@@ -157,6 +157,13 @@ Every one of these was a single product page in the old catalog. The full catalo
 hand, refused 6,729 pairs in the same sample, mostly correct ones, because marketplaces fill the
 brand field with the seller's name. Turn it on (`check_brands=True`) only when your brand field is clean.
 
+### Checked pair by pair
+
+The [product-matching pairs dataset](https://github.com/CaiqueDourado/pares-matching-produtos-ptbr) has 780 candidate pairs from the catalog checked one by one at SKU level.
+Merging every candidate, as the 2019 catalog did, gives 25% precision; DedupKit's word and attribute checks give
+**47% precision at 91% recall**; adding a model-number check (TB125 vs TB112, PS3 vs PS4) gives 83% at 68%.
+The 0.2.0 attribute rules (sizes, packs, dimension lists, 110 = 127 V) were written from the errors found in those pairs.
+
 ## The story
 
 The catalog matched offers from dozens of stores with a SQL Server routine (2020–2022) over twelve
