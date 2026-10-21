@@ -40,7 +40,7 @@ public static class ProductAttributes
     };
 
     private static readonly Regex Measure = new(
-        "(?<![a-z0-9])([0-9]+(?:[.,][0-9]+)?) ?(" +
+        "(?<![a-z0-9])(?<![0-9][.,])(?<![0-9]x )(?<![0-9] x )([0-9]+(?:[.,][0-9]+)?) ?(" +
         string.Join('|', Units.Select(u => u.Unit).OrderByDescending(u => u.Length)) +
         ")(?![a-z0-9])",
         RegexOptions.CultureInvariant | RegexOptions.Compiled);

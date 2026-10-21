@@ -140,7 +140,7 @@ GTIN length, and those still identify the product inside the catalog.
 
 The name is folded as in 1.1 but keeping `.` and `,`, and spaces are collapsed.
 
-Measures: `(?<![a-z0-9])([0-9]+(?:[.,][0-9]+)?) ?(unit)(?![a-z0-9])`, units tried longest first:
+Measures: `(?<![a-z0-9])(?<![0-9][.,])(?<![0-9]x )(?<![0-9] x )([0-9]+(?:[.,][0-9]+)?) ?(unit)(?![a-z0-9])`, units tried longest first. The lookbehinds skip numbers that are part of a dimension list or a pack (`10,6x8,5cm`, `1,50 x 2,00 m`, `2 x 500ml`): the unit belongs to the whole list, so no single value is taken from it.
 
 | Dimension | Units (factor to the base unit) |
 |---|---|

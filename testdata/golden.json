@@ -498,6 +498,52 @@
      "5000"
     ]
    },
+   "other": "Porta Escova 10,6x8,5cm Verde",
+   "shares_word": false,
+   "conflict": null
+  },
+  {
+   "text": "Porta Escova 10,6x8,5cm Verde",
+   "normalize": "porta escova 10 6x8 5cm verde",
+   "fingerprint": "10 5cm 6x8 escova porta verde",
+   "legacy_fingerprint": "10 6x8 porta ",
+   "ngram2": "06105c6x85a1aecmcodeeresmvorovpordrtsctavavex8",
+   "ngram3": "06x1065cm6x885ca10aescmvcoverdescmveortovaporrdertascotaeva1verx85",
+   "token_key": "10 5cm 6x8 escova porta verde",
+   "phonetic": "PRT ESKV 10 6X8 5KM VRD",
+   "attributes": {
+    "colour": [
+     "verde"
+    ]
+   },
+   "other": "Toalha 1,50 x 2,00 m",
+   "shares_word": false,
+   "conflict": null
+  },
+  {
+   "text": "Toalha 1,50 x 2,00 m",
+   "normalize": "toalha 1 50 x 2 00 m",
+   "fingerprint": "00 1 2 50 m toalha x",
+   "legacy_fingerprint": "00 2 m x",
+   "ngram2": "000m0x152050a1alhalhoatox2",
+   "ngram3": "00m0x215020050xa15alhha1lhaoaltoax20",
+   "token_key": "00 1 2 50 m toalha x",
+   "phonetic": "T1 1 50 X 2 00 M",
+   "attributes": {},
+   "other": "Kit 2 x 500ml",
+   "shares_word": false,
+   "conflict": null
+  },
+  {
+   "text": "Kit 2 x 500ml",
+   "normalize": "kit 2 x 500ml",
+   "fingerprint": "2 500ml kit x",
+   "legacy_fingerprint": "2 kit ",
+   "ngram2": "000m2x50itkimlt2x5",
+   "ngram3": "00m0ml2x5500it2kitt2xx50",
+   "token_key": "2 500ml kit x",
+   "phonetic": "KT 2 X 500M",
+   "attributes": {},
    "other": "日本語 テキスト",
    "shares_word": false,
    "conflict": null
@@ -3050,11 +3096,7 @@
    "ngram3": "0570x027057c70x7cmadealoapearebaldeadepdeseadedeeldepaes2esiivoldeloeobaoespapparpelreds27sivvobx05",
    "token_key": "2 57cm 70x0 adesivo balao papel parede",
    "phonetic": "P D PRD ADZV BLS 2 70X0 57KM",
-   "attributes": {
-    "length_cm": [
-     "57"
-    ]
-   },
+   "attributes": {},
    "other": "Lowell Silver Slim Shampoo Desamarelador 240 Ml",
    "shares_word": false,
    "conflict": null

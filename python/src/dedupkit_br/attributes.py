@@ -37,7 +37,7 @@ COLOURS = {
 GENDERS = {"masculino": "masculino", "masculina": "masculino", "feminino": "feminino", "feminina": "feminino",
            "infantil": "infantil", "unissex": "unissex"}
 
-_MEASURE = re.compile(r"(?<![a-z0-9])([0-9]+(?:[.,][0-9]+)?) ?(" + "|".join(sorted(UNITS, key=len, reverse=True)) + r")(?![a-z0-9])")
+_MEASURE = re.compile(r"(?<![a-z0-9])(?<![0-9][.,])(?<![0-9]x )(?<![0-9] x )([0-9]+(?:[.,][0-9]+)?) ?(" + "|".join(sorted(UNITS, key=len, reverse=True)) + r")(?![a-z0-9])")
 
 
 def _fold(text: str) -> str:

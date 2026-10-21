@@ -138,7 +138,7 @@ desligada porque os dados reais a derrubaram.
 [`evaluation/real_sample.py`](evaluation/real_sample.py) roda a conferência de atributos sobre as 28.569 ofertas
 da [amostra pública do catálogo](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil),
 agrupadas em 2019 em 4.030 grupos. Sem mudar nenhum parâmetro, **762 desses grupos seriam divididos**.
-Pares recusados, por motivo: cor 806, comprimento 325, volume 113, voltagem 93, memória 31, peso 25,
+Pares recusados, por motivo: cor 806, comprimento 333, volume 113, voltagem 93, memória 31, peso 25,
 potência 9, e 41 casamentos por EAN cujos nomes não têm nenhuma palavra em comum.
 
 | Regra | Anúncio A | Anúncio B | Motivo da recusa |

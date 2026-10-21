@@ -138,7 +138,7 @@ is off by default because real data broke it.
 [`evaluation/real_sample.py`](evaluation/real_sample.py) runs the attribute check on the 28,569 offers
 of the [catalog's public sample](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil),
 grouped in 2019 into 4,030 groups. Without changing any parameter, **762 of those groups would be
-split**. Pairs refused, by reason: colour 806, length 325, volume 113, voltage 93, memory 31,
+split**. Pairs refused, by reason: colour 806, length 333, volume 113, voltage 93, memory 31,
 weight 25, power 9, and 41 barcode matches whose names share no word.
 
 | Rule | Listing A | Listing B | Why refused |

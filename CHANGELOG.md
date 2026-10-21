@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1 (2026-10-21)
+
+- Attributes: numbers inside dimension lists and packs (`10,6x8,5cm`, `1,50 x 2,00 m`, `2 x 500ml`) are no longer read as a measure. Before, `10,6x8,5cm` gave a length of 5 cm and refused a correct pair. Found while building the product-matching pairs dataset.
+
 ## 0.1.0 (2026-10-21)
 
 First release, Python (`dedupkit-br`) and .NET (`DedupKit`) with identical results.
