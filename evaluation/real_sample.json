@@ -1,0 +1,54 @@
+{
+ "offers": 28569,
+ "groups_2019": 4030,
+ "groups_2019_split": 762,
+ "refused_by_reason": {
+  "colour": 806,
+  "length_cm": 325,
+  "volume_l": 113,
+  "voltage_v": 93,
+  "names share no word": 41,
+  "memory_gb": 31,
+  "weight_kg": 25,
+  "power_w": 9
+ },
+ "brand_check_refusals": 6729,
+ "examples": {
+  "colour": {
+   "rule": "code",
+   "a": "Sutiã de Amamentação Preto Medela",
+   "b": "Sutiã de Amamentação Branco Medela",
+   "reason": "colour: preto vs branco"
+  },
+  "length_cm": {
+   "rule": "code",
+   "a": "Colher de Silicone Olivewood Staub Verde Basil 31CM - 24836",
+   "b": "Colher de Silicone com Cabo de Madeira Staub 32cm Verde",
+   "reason": "length_cm: 31 vs 32"
+  },
+  "weight_kg": {
+   "rule": "code",
+   "a": "Mass Way 2500 Baunilha 400g",
+   "b": "Mass Way 2500 (500g) - Baunilha",
+   "reason": "weight_kg: 0.4 vs 0.5"
+  },
+  "volume_l": {
+   "rule": "code",
+   "a": "Squeeze Alumínio 500ml - Preto - Acte Sports",
+   "b": "Squeeze Alumínio 750Ml - Preto - Acte Sports",
+   "reason": "volume_l: 0.5 vs 0.75"
+  },
+  "voltage_v": {
+   "rule": "image",
+   "a": "Toalheiro Elétrico A20 220v Emmeti",
+   "b": "Toalheiro Elétrico A10 127v Emmeti",
+   "reason": "voltage_v: 220 vs 127"
+  },
+  "memory_gb": {
+   "rule": "image",
+   "a": "Pen Drive 32gb de Couro Branco com Argola Personalizado para Chaveiro",
+   "b": "Pen Drive 4gb Personalizado de Couro Branco com Argola Usado Como Chaveiro",
+   "reason": "memory_gb: 32 vs 4"
+  }
+ }
+}

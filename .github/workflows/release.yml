@@ -1,0 +1,48 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*.*.*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Version from tag
+        run: echo "VERSION=${GITHUB_REF_NAME#v}" >> "$GITHUB_ENV"
+
+      - name: Test
+        run: |
+          python -m pip install ./python[test] build
+          python -m pytest python/tests -q
+          dotnet test dotnet -c Release
+
+      - name: Build packages
+        run: |
+          python -m build python --outdir artifacts
+          dotnet pack dotnet/src/DedupKit -c Release -o artifacts -p:Version=$VERSION
+
+      - name: GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: artifacts/*
+          generate_release_notes: true
+
+      - name: Publish to NuGet.org (only when NUGET_API_KEY is set)
+        if: env.NUGET_API_KEY != ''
+        run: dotnet nuget push "artifacts/*.nupkg" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate

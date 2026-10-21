@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>DedupKit</PackageId>
+    <Description>Find listings that are the same product in Brazilian Portuguese data: OpenRefine-style fingerprints, a Portuguese phonetic key, plural reduction, barcode rules (GTIN check, blacklist, shared-word guard) and an attribute check that refuses different sizes, voltages and colours. Audit trail of every link. Zero dependencies; results match the Python package dedupkit-br.</Description>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\README.md" Pack="true" PackagePath="\" Visible="false" />
+  </ItemGroup>
+
+</Project>

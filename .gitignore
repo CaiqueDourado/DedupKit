@@ -1,0 +1,23 @@
+# .NET
+bin/
+obj/
+artifacts/
+TestResults/
+*.user
+*.suo
+.vs/
+*.nupkg
+*.snupkg
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+build/
+dist/
+*.egg-info/
+# editors and OS
+.vscode/
+.idea/
+.DS_Store
+evaluation/.cache/
