@@ -173,7 +173,8 @@ chaves. Ela está publicada, só para leitura, no repositório do catálogo:
 Reescrevê-la mostrou o que os números acima medem:
 
 - o fingerprint do nome era calculado por uma função que **mantinha uma palavra sim, outra não**, então
-  produtos diferentes podiam ter a mesma chave (`legacy_fingerprint` reproduz isso);
+  produtos diferentes podiam ter a mesma chave (`legacy_fingerprint` reproduz isso). A mesma função gerou o
+  `key_fingerprint` da [base de nomes e sobrenomes](https://github.com/CaiqueDourado/nomes-e-sobrenomes-brasil), onde o bug também está documentado;
 - casamentos por EAN só conferiam palavra em comum para EANs longos, e nada comparava tamanho ou voltagem,
   então vendedores que usam um EAN para a linha inteira juntavam tudo numa página só;
 - o agrupamento em dois saltos dependia da ordem em que as ofertas chegavam (`mode="two_hop"` reproduz;

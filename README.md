@@ -172,7 +172,8 @@ keys. It is published, read-only, in the catalog repository:
 Rewriting it showed what the numbers above measure:
 
 - the name fingerprint was computed by a keyer that **kept every other word**, so different products
-  could share a key (`legacy_fingerprint` reproduces it);
+  could share a key (`legacy_fingerprint` reproduces it). The same keyer built `key_fingerprint` in the
+  [Brazilian names dataset](https://github.com/CaiqueDourado/nomes-e-sobrenomes-brasil), where the bug is documented too;
 - barcode matches were checked for a shared word only for long EANs, and nothing compared sizes or voltages,
   so sellers that reuse one barcode for a whole product line merged it into one page;
 - the two-hop grouping depended on the order in which offers arrived (`mode="two_hop"` reproduces it;
