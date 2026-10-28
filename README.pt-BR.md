@@ -197,6 +197,7 @@ As chaves de imagem vêm da assinatura 16×16 do mesmo catálogo, hoje
 
 ## Relacionados
 
+- [google-keywords-dataset](https://github.com/CaiqueDourado/google-keywords-dataset): 38 milhões de buscas do Google agrupadas em padrões com radicais e troca de entidades, a mesma família de chaves usada aqui ([Kaggle](https://www.kaggle.com/datasets/caiquedourado/google-keywords-dataset)).
 - [catalogo-produtos-ecommerce-brasil](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil): as 114,6 milhões de ofertas que este agrupamento juntou.
 - [pares-matching-produtos-ptbr](https://github.com/CaiqueDourado/pares-matching-produtos-ptbr): pares rotulados para medir um matcher, com negativos difíceis.
 - [fipe-ficha-tecnica-veiculos](https://github.com/CaiqueDourado/fipe-ficha-tecnica-veiculos): 25,5 milhões de pares veículo × produto casados só pelo nome, a maioria errada. Mostra por que a conferência de atributos e a trilha de auditoria existem.

@@ -196,6 +196,7 @@ Image keys come from the 16×16 signature of the same catalog, now
 
 ## Related
 
+- [google-keywords-dataset](https://github.com/CaiqueDourado/google-keywords-dataset): 38 million Google searches grouped into search patterns with stems and entity replacement, the same family of keys used here ([Kaggle](https://www.kaggle.com/datasets/caiquedourado/google-keywords-dataset)).
 - [catalogo-produtos-ecommerce-brasil](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil): the 114.6 million offers this matching grouped.
 - [pares-matching-produtos-ptbr](https://github.com/CaiqueDourado/pares-matching-produtos-ptbr): labelled pairs to measure a matcher, with hard negatives.
 - [fipe-ficha-tecnica-veiculos](https://github.com/CaiqueDourado/fipe-ficha-tecnica-veiculos): 25.5 million vehicle × product pairs matched by name alone, most of them wrong. It shows why the attribute check and the audit trail exist.
