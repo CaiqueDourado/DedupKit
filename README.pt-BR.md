@@ -6,6 +6,8 @@
 [![.NET](https://github.com/CaiqueDourado/DedupKit/actions/workflows/dotnet.yml/badge.svg)](https://github.com/CaiqueDourado/DedupKit/actions/workflows/dotnet.yml)
 ![Licença: MIT](https://img.shields.io/badge/license-MIT-blue)
 
+![DedupKit](docs/img/cover.pt-BR.png)
+
 Encontra anúncios que são o mesmo produto em dados em português do Brasil, e recusa os que
 só parecem iguais.
 

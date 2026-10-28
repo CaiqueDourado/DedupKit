@@ -6,6 +6,8 @@
 [![.NET](https://github.com/CaiqueDourado/DedupKit/actions/workflows/dotnet.yml/badge.svg)](https://github.com/CaiqueDourado/DedupKit/actions/workflows/dotnet.yml)
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 
+![DedupKit](docs/img/cover.png)
+
 Find listings that are the same product in Brazilian Portuguese data, and refuse the ones
 that only look the same.
 
