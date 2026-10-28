@@ -195,6 +195,12 @@ As chaves de imagem vêm da assinatura 16×16 do mesmo catálogo, hoje
 - Todos os pares de um bloco são comparados, então um bloco tem no máximo 100 registros (`max_block`) e é informado quando ignorado.
 - A conferência de atributos só vê o que o nome diz. Um anúncio que omite o tamanho casa com os dois tamanhos.
 
+## Relacionados
+
+- [catalogo-produtos-ecommerce-brasil](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil): as 114,6 milhões de ofertas que este agrupamento juntou.
+- [pares-matching-produtos-ptbr](https://github.com/CaiqueDourado/pares-matching-produtos-ptbr): pares rotulados para medir um matcher, com negativos difíceis.
+- [fipe-ficha-tecnica-veiculos](https://github.com/CaiqueDourado/fipe-ficha-tecnica-veiculos): 25,5 milhões de pares veículo × produto casados só pelo nome, a maioria errada. Mostra por que a conferência de atributos e a trilha de auditoria existem.
+
 ## Repositório
 
 | Caminho | Conteúdo |

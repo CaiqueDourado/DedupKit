@@ -194,6 +194,12 @@ Image keys come from the 16×16 signature of the same catalog, now
 - All pairs inside a block are compared, so a block is capped at 100 records (`max_block`) and reported when skipped.
 - The attribute check only sees what the name says. A listing that omits the size will match both sizes.
 
+## Related
+
+- [catalogo-produtos-ecommerce-brasil](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil): the 114.6 million offers this matching grouped.
+- [pares-matching-produtos-ptbr](https://github.com/CaiqueDourado/pares-matching-produtos-ptbr): labelled pairs to measure a matcher, with hard negatives.
+- [fipe-ficha-tecnica-veiculos](https://github.com/CaiqueDourado/fipe-ficha-tecnica-veiculos): 25.5 million vehicle × product pairs matched by name alone, most of them wrong. It shows why the attribute check and the audit trail exist.
+
 ## Repository
 
 | Path | Contents |
