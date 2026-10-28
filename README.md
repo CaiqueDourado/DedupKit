@@ -140,7 +140,7 @@ is off by default because real data broke it.
 ## On real data
 
 [`evaluation/real_sample.py`](evaluation/real_sample.py) runs the attribute check on the 28,569 offers
-of the [catalog's public sample](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil),
+of the [catalog's public sample](https://github.com/CaiqueDourado/brazilian-ecommerce-products),
 grouped in 2019 into 4,030 groups. Without changing any parameter, **795 of those groups would be
 split**. Pairs refused, by reason: clothing or shoe size 2,792, colour 721, length 330, dimension list 323,
 pack quantity 267, volume 113, voltage 93, screen 43, memory 31, weight 25, power 9, and 41 barcode
@@ -161,7 +161,7 @@ brand field with the seller's name. Turn it on (`check_brands=True`) only when y
 
 ### Checked pair by pair
 
-The [product-matching pairs dataset](https://github.com/CaiqueDourado/pares-matching-produtos-ptbr) has 780 candidate pairs from the catalog checked one by one at SKU level.
+The [product-matching pairs dataset](https://github.com/CaiqueDourado/product-matching-pairs-portuguese) has 780 candidate pairs from the catalog checked one by one at SKU level.
 Merging every candidate, as the 2019 catalog did, gives 25% precision; DedupKit's word and attribute checks give
 **47% precision at 91% recall**; adding a model-number check (TB125 vs TB112, PS3 vs PS4) gives 83% at 68%.
 The 0.2.0 attribute rules (sizes, packs, dimension lists, 110 = 127 V) were written from the errors found in those pairs.
@@ -170,12 +170,12 @@ The 0.2.0 attribute rules (sizes, packs, dimension lists, 110 = 127 V) were writ
 
 The catalog matched offers from dozens of stores with a SQL Server routine (2020–2022) over twelve
 keys. It is published, read-only, in the catalog repository:
-[legacy/agrupa_insere_grupos_produtos_similares.sql](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil/tree/main/legacy).
+[legacy/agrupa_insere_grupos_produtos_similares.sql](https://github.com/CaiqueDourado/brazilian-ecommerce-products/tree/main/legacy).
 Rewriting it showed what the numbers above measure:
 
 - the name fingerprint was computed by a keyer that **kept every other word**, so different products
   could share a key (`legacy_fingerprint` reproduces it). The same keyer built `key_fingerprint` in the
-  [Brazilian names dataset](https://github.com/CaiqueDourado/nomes-e-sobrenomes-brasil), where the bug is documented too,
+  [Brazilian names dataset](https://github.com/CaiqueDourado/brazilian-names-surnames), where the bug is documented too,
   and grouped review clauses in 2020, where it joined "ótima qualidade" with "péssima qualidade"
   ([pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr) now groups them with negation-safe keys);
 - barcode matches were checked for a shared word only for long EANs, and nothing compared sizes or voltages,
@@ -197,8 +197,8 @@ Image keys come from the 16×16 signature of the same catalog, now
 ## Related
 
 - [google-keywords-dataset](https://github.com/CaiqueDourado/google-keywords-dataset): 38 million Google searches grouped into search patterns with stems and entity replacement, the same family of keys used here ([Kaggle](https://www.kaggle.com/datasets/caiquedourado/google-keywords-dataset)).
-- [catalogo-produtos-ecommerce-brasil](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil): the 114.6 million offers this matching grouped.
-- [pares-matching-produtos-ptbr](https://github.com/CaiqueDourado/pares-matching-produtos-ptbr): labelled pairs to measure a matcher, with hard negatives.
+- [brazilian-ecommerce-products](https://github.com/CaiqueDourado/brazilian-ecommerce-products): the 114.6 million offers this matching grouped.
+- [product-matching-pairs-portuguese](https://github.com/CaiqueDourado/product-matching-pairs-portuguese): labelled pairs to measure a matcher, with hard negatives.
 - [fipe-ficha-tecnica-veiculos](https://github.com/CaiqueDourado/fipe-ficha-tecnica-veiculos): 25.5 million vehicle × product pairs matched by name alone, most of them wrong. It shows why the attribute check and the audit trail exist.
 
 ## Repository

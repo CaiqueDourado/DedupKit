@@ -140,7 +140,7 @@ desligada porque os dados reais a derrubaram.
 ## Em dados reais
 
 [`evaluation/real_sample.py`](evaluation/real_sample.py) roda a conferência de atributos sobre as 28.569 ofertas
-da [amostra pública do catálogo](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil),
+da [amostra pública do catálogo](https://github.com/CaiqueDourado/brazilian-ecommerce-products),
 agrupadas em 2019 em 4.030 grupos. Sem mudar nenhum parâmetro, **795 desses grupos seriam divididos**.
 Pares recusados, por motivo: tamanho de roupa ou calçado 2.792, cor 721, comprimento 330, lista de dimensões 323,
 quantidade 267, volume 113, voltagem 93, tela 43, memória 31, peso 25, potência 9, e 41 casamentos por EAN cujos
@@ -161,7 +161,7 @@ do vendedor. Ligue (`check_brands=True`) só quando o seu campo de marca for lim
 
 ### Conferido par a par
 
-O [dataset de pares para matching](https://github.com/CaiqueDourado/pares-matching-produtos-ptbr) tem 780 pares candidatos do catálogo conferidos um a um, no nível de SKU.
+O [dataset de pares para matching](https://github.com/CaiqueDourado/product-matching-pairs-portuguese) tem 780 pares candidatos do catálogo conferidos um a um, no nível de SKU.
 Juntar todo candidato, como fazia o catálogo de 2019, dá 25% de precisão; as conferências de palavra e atributos do
 DedupKit dão **47% de precisão com 91% de cobertura**; somando uma conferência de número de modelo (TB125 × TB112,
 PS3 × PS4), 83% com 68%. As regras de atributos da 0.2.0 (tamanhos, quantidades, listas de dimensões, 110 = 127 V)
@@ -171,12 +171,12 @@ foram escritas a partir dos erros encontrados nesses pares.
 
 O catálogo juntava ofertas de dezenas de lojas com uma rotina em SQL Server (2020–2022) sobre doze
 chaves. Ela está publicada, só para leitura, no repositório do catálogo:
-[legacy/agrupa_insere_grupos_produtos_similares.sql](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil/tree/main/legacy).
+[legacy/agrupa_insere_grupos_produtos_similares.sql](https://github.com/CaiqueDourado/brazilian-ecommerce-products/tree/main/legacy).
 Reescrevê-la mostrou o que os números acima medem:
 
 - o fingerprint do nome era calculado por uma função que **mantinha uma palavra sim, outra não**, então
   produtos diferentes podiam ter a mesma chave (`legacy_fingerprint` reproduz isso). A mesma função gerou o
-  `key_fingerprint` da [base de nomes e sobrenomes](https://github.com/CaiqueDourado/nomes-e-sobrenomes-brasil), onde o bug também está documentado,
+  `key_fingerprint` da [base de nomes e sobrenomes](https://github.com/CaiqueDourado/brazilian-names-surnames), onde o bug também está documentado,
   e agrupou as cláusulas dos reviews em 2020, juntando "ótima qualidade" com "péssima qualidade"
   (a [pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr) agora agrupa com chaves que respeitam a negação);
 - casamentos por EAN só conferiam palavra em comum para EANs longos, e nada comparava tamanho ou voltagem,
@@ -198,8 +198,8 @@ As chaves de imagem vêm da assinatura 16×16 do mesmo catálogo, hoje
 ## Relacionados
 
 - [google-keywords-dataset](https://github.com/CaiqueDourado/google-keywords-dataset): 38 milhões de buscas do Google agrupadas em padrões com radicais e troca de entidades, a mesma família de chaves usada aqui ([Kaggle](https://www.kaggle.com/datasets/caiquedourado/google-keywords-dataset)).
-- [catalogo-produtos-ecommerce-brasil](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil): as 114,6 milhões de ofertas que este agrupamento juntou.
-- [pares-matching-produtos-ptbr](https://github.com/CaiqueDourado/pares-matching-produtos-ptbr): pares rotulados para medir um matcher, com negativos difíceis.
+- [brazilian-ecommerce-products](https://github.com/CaiqueDourado/brazilian-ecommerce-products): as 114,6 milhões de ofertas que este agrupamento juntou.
+- [product-matching-pairs-portuguese](https://github.com/CaiqueDourado/product-matching-pairs-portuguese): pares rotulados para medir um matcher, com negativos difíceis.
 - [fipe-ficha-tecnica-veiculos](https://github.com/CaiqueDourado/fipe-ficha-tecnica-veiculos): 25,5 milhões de pares veículo × produto casados só pelo nome, a maioria errada. Mostra por que a conferência de atributos e a trilha de auditoria existem.
 
 ## Repositório

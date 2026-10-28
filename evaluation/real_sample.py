@@ -21,7 +21,7 @@ sys.path.insert(0, str(ROOT / "python" / "src"))
 
 import dedupkit_br as dk  # noqa: E402
 
-BASE = "https://raw.githubusercontent.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil/main/sample/"
+BASE = "https://raw.githubusercontent.com/CaiqueDourado/brazilian-ecommerce-products/main/sample/"
 CACHE = ROOT / "evaluation" / ".cache"
 
 
