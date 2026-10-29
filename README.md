@@ -95,6 +95,16 @@ The building blocks are public too:
 | `conflict` | `ProductAttributes.Conflict` | `"110V"`, `"220V"` → `"voltage_v: 110 vs 220"` |
 | `is_valid_gtin`, `code_class` | `Codes.IsValidGtin`, `Codes.Classify` | `"7891234567895"` → valid, `long` |
 
+## What a decision looks like
+
+Listings 5 and 6 of [`examples/listings.csv`](examples/listings.csv) share a barcode, so the `code` rule puts them
+in one block; the attribute check finds different power and voltage, and the pair is refused with the reason.
+
+![One match decision as JSON](docs/img/decision-json.png)
+
+Full JSON: [`docs/example-decision.json`](docs/example-decision.json), written by
+[`scripts/make_json.py`](scripts/make_json.py) from what `match()`, `attributes()` and `conflict()` return.
+
 ## How it works
 
 ```mermaid

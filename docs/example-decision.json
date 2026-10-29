@@ -1,0 +1,75 @@
+{
+  "input": "examples/listings.csv",
+  "call": "match(records)",
+  "records": [
+    {
+      "id": "5",
+      "name": "Chuveiro Elétrico Lorenzetti Acqua Duo 220V 7800W",
+      "brand": "Lorenzetti",
+      "codes": [
+        "7891129220911"
+      ],
+      "url": "",
+      "image": "",
+      "source": "loja-a"
+    },
+    {
+      "id": "6",
+      "name": "Chuveiro Eletrico Lorenzetti Acqua Duo 127V 5500W",
+      "brand": "Lorenzetti",
+      "codes": [
+        "7891129220911"
+      ],
+      "url": "",
+      "image": "",
+      "source": "loja-b"
+    }
+  ],
+  "shared_keys": [
+    {
+      "rule": "code",
+      "value": "7891129220911"
+    }
+  ],
+  "attributes": {
+    "5": {
+      "power_w": [
+        "7800"
+      ],
+      "voltage_v": [
+        "220"
+      ]
+    },
+    "6": {
+      "power_w": [
+        "5500"
+      ],
+      "voltage_v": [
+        "127"
+      ]
+    }
+  },
+  "conflict": "power_w: 7800 vs 5500",
+  "links": [],
+  "rejected": [
+    {
+      "a": "5",
+      "b": "6",
+      "rule": "code",
+      "value": "7891129220911",
+      "reason": "power_w: 7800 vs 5500"
+    }
+  ],
+  "cluster_of": {
+    "5": 3,
+    "6": 4
+  },
+  "via": {
+    "5": [
+      "name_phonetic",
+      "XVR ELTRK LRMZT AK D 220V 7800V"
+    ],
+    "6": null
+  },
+  "same_cluster": false
+}

@@ -95,6 +95,17 @@ As peças também são públicas:
 | `conflict` | `ProductAttributes.Conflict` | `"110V"`, `"220V"` → `"voltage_v: 110 vs 220"` |
 | `is_valid_gtin`, `code_class` | `Codes.IsValidGtin`, `Codes.Classify` | `"7891234567895"` → válido, `long` |
 
+## Como fica uma decisão
+
+Os anúncios 5 e 6 de [`examples/listings.csv`](examples/listings.csv) têm o mesmo código de barras, então a regra
+`code` os coloca no mesmo bloco; a conferência de atributos encontra potência e voltagem diferentes, e o par é
+recusado com o motivo.
+
+![Uma decisão em JSON](docs/img/decision-json.png)
+
+JSON completo: [`docs/example-decision.json`](docs/example-decision.json), gerado por
+[`scripts/make_json.py`](scripts/make_json.py) a partir do que `match()`, `attributes()` e `conflict()` devolvem.
+
 ## Como funciona
 
 ```mermaid
