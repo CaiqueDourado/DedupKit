@@ -293,6 +293,7 @@ Image keys come from the 16×16 signature of the same catalog, now
 
 ## Related
 
+- Article: [Metaphone, Soundex, n-grams and MinHash on Brazilian product names](https://github.com/CaiqueDourado/articles/blob/main/text-similarity/README.md): what each key and safeguard does on real Brazilian product names.
 - [search-pattern-miner](https://github.com/CaiqueDourado/search-pattern-miner): turns search queries into patterns with the same stems and keys, from the same author.
 - [google-keywords-dataset](https://github.com/CaiqueDourado/google-keywords-dataset): 38 million Google searches grouped into search patterns with stems and entity replacement, the same family of keys used here ([Kaggle](https://www.kaggle.com/datasets/caiquedourado/google-keywords-dataset)).
 - [brazilian-ecommerce-products](https://github.com/CaiqueDourado/brazilian-ecommerce-products): the 114.6 million offers this matching grouped.
