@@ -60,4 +60,28 @@ public class BehaviourTests
         Assert.Equal(1.0, s.Precision);
         Assert.Equal(3, s.TruePairs);
     }
+
+    // Counterexamples from the 2019 key experiments (evaluation/keys_benchmark.md), as in python/tests/test_text.py.
+    private static readonly Func<string, string>[] ShippedKeys =
+        { TextKeys.Fingerprint, TextKeys.TokenKey, TextKeys.PhoneticKey, t => TextKeys.NgramFingerprint(t) };
+
+    [Theory]
+    [InlineData("DVD Canta Rio 98", "Dvd - Centurião")]
+    [InlineData("Acabamento para Registro Gaveta 1 1/2\" LK Cromado - 4900.C17.GD - Deca - Deca", "Bandagem Vollke Elastica Preta 5 Metros")]
+    public void CounterexamplesOfDroppedKeysStayApart(string a, string b)
+    {
+        foreach (var key in ShippedKeys)
+            Assert.NotEqual(key(a), key(b));
+    }
+
+    [Fact]
+    public void NumbersArePartOfTheKey() =>
+        Assert.NotEqual(TextKeys.PhoneticKey("Shampoo Aussie Moist 865ML"), TextKeys.PhoneticKey("Shampoo Aussie Moist 180 Ml"));
+
+    [Fact]
+    public void KnownLimits()
+    {
+        Assert.NotEqual(TextKeys.PhoneticKey("Hambúrguer"), TextKeys.PhoneticKey("Hamburger"));
+        Assert.NotEqual(TextKeys.Normalize("lav¨¢vel"), TextKeys.Normalize("lavável"));
+    }
 }

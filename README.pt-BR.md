@@ -178,6 +178,48 @@ DedupKit dão **47% de precisão com 91% de cobertura**; somando uma conferênci
 PS3 × PS4), 83% com 68%. As regras de atributos da 0.2.0 (tamanhos, quantidades, listas de dimensões, 110 = 127 V)
 foram escritas a partir dos erros encontrados nesses pares.
 
+## Por que estas chaves
+
+Em 2019, antes de escrever a rotina de agrupamento, o autor calculou cerca de 15 chaves para cada nome de produto
+distinto do catálogo (cinco variantes de Soundex, três de Metaphone, o fingerprint e o n-grama do OpenRefine, três
+fingerprints de palavras, uma normalização "soft", um hash e as chaves omission e skeleton de correção ortográfica),
+comparou-as par a par ("igual em A, diferente em B") e anotou as decisões no SQL: usar o fingerprint de palavras sem
+stopwords e descartar a variante que também separava e ordenava palavras ("muitos falsos positivos"). As chaves do
+DedupKit são as que sobraram. O [`evaluation/keys_benchmark.py`](evaluation/keys_benchmark.py) mede de novo essas
+chaves, e as descartadas que dá para reconstruir, nos 715 pares decididos do conjunto gold e nos 9.971 nomes
+distintos da amostra do catálogo:
+
+| Chave | No DedupKit | Pares do mesmo produto unidos | Pares de produtos diferentes unidos | Precisão | Blocos | Maior bloco |
+|---|:---:|---:|---:|---:|---:|---:|
+| `normalize` | sim | 11 (7%) | 0 | 100% | 8.855 | 7 |
+| `fingerprint` | sim | 16 (10%) | 1 | 94% | 8.448 | 20 |
+| `token_key` | sim | 16 (10%) | 1 | 94% | 8.319 | 22 |
+| `phonetic_key` | sim | 12 (7%) | 2 | 86% | 8.776 | 10 |
+| `ngram_fingerprint` | sim | 13 (8%) | 0 | 100% | 8.759 | 8 |
+| `fingerprint_2019` | não | 19 (12%) | 31 | 38% | 7.766 | 23 |
+| `phonetic_no_digits` | não | 22 (13%) | 219 | 9% | 7.522 | 22 |
+| `skeleton` | não | 36 (22%) | 254 | 12% | 6.726 | 36 |
+| `skeleton_2019` | não | 23 (14%) | 219 | 10% | 7.474 | 21 |
+| `omission` | não | 45 (27%) | 268 | 14% | 6.337 | 43 |
+
+- **Uma chave de nome sozinha acha poucos destes pares**, e é o esperado: os pares gold foram escolhidos difíceis
+  (mesmo código de barras ou foto, nome escrito de outro jeito). Chaves de nome fazem blocos; o código, a foto e a
+  conferência de atributos fazem o resto.
+- **Números fazem parte do produto.** A chave fonética sem números junta 219 produtos diferentes (*Shampoo Aussie
+  Moist 865ML* × *180 Ml*) para achar 22 certos.
+- **Chaves de correção ortográfica ignoram palavras.** Omission e skeleton (Pollock e Zamora, via Talisman) guardam
+  cada letra uma vez, e nomes sem relação colidem: a omission pôs *Acabamento para Registro Gaveta… Deca* e *Bandagem
+  Vollke Elastica Preta 5 Metros* na mesma chave. A versão de 2019 do skeleton ainda tinha um bug (a parte das vogais
+  repetia as consoantes): *DVD Canta Rio 98* e *Dvd - Centurião* viravam `D/VCNTR/VCNTR`.
+- **O fingerprint que pulava uma palavra sim, outra não**, de 2019, junta 31 pares de produtos diferentes; o
+  corrigido junta 1.
+- Não reconstruídos: as variantes de Soundex (um fonetizador de português de 1.100 linhas) e o hash; o `phonetic_key`
+  substitui as variantes de Metaphone.
+
+Esses contraexemplos viraram testes nas duas linguagens, com dois limites conhecidos: *Hambúrguer* × *Hamburger* têm
+chaves fonéticas diferentes (g × j antes de e), e texto com codificação quebrada (*lav¨¢vel*) precisa ser reparado
+antes ([PtBr.Text](https://github.com/CaiqueDourado/PtBr.Text) faz isso).
+
 ## A história
 
 O catálogo juntava ofertas de dezenas de lojas com uma rotina em SQL Server (2020–2022) sobre doze
@@ -224,7 +266,7 @@ As chaves de imagem vêm da assinatura 16×16 do mesmo catálogo, hoje
 | `spec/ALGORITHMS.md` | as regras que as duas versões seguem |
 | `testdata/golden.json` | saídas esperadas, geradas por `tools/make_testdata.py` |
 | `tools/` | gerador da tabela de acentos, anúncios sintéticos, gerador dos dados de teste |
-| `evaluation/` | benchmark sintético, conferência na amostra real, figura |
+| `evaluation/` | benchmark sintético, conferência na amostra real, benchmark de chaves (`keys_benchmark.py`), figura |
 | `examples/listings.csv` | o exemplo acima |
 
 Créditos das ideias usadas em [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).

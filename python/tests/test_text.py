@@ -94,3 +94,36 @@ def test_attributes_and_conflicts():
     assert dk.conflict("Toalha 1,50 x 2,00 m", "Toalha 150x200cm") is None
     assert dk.conflict('TV 55" Samsung', 'TV 40" Samsung') == "screen_in: 55 vs 40"
     assert dk.conflict("Tênis Masculino", "Tênis Feminino") == "gender: masculino vs feminino"
+
+
+# Counterexamples from the 2019 key experiments (evaluation/keys_benchmark.md): the keys DedupKit ships must not fall
+# for the traps of the ones it dropped, and the known limits stay documented.
+def test_counterexample_skeleton_dvd():
+    # the 2019 skeleton key put both in D/VCNTR/VCNTR
+    a, b = "DVD Canta Rio 98", "Dvd - Centurião"
+    for key in (dk.fingerprint, dk.token_key, dk.phonetic_key, dk.ngram_fingerprint):
+        assert key(a) != key(b)
+
+
+def test_counterexample_omission_unrelated_products():
+    # the omission key joined these two (same consonants and vowels, nothing else in common)
+    a = 'Acabamento para Registro Gaveta 1 1/2" LK Cromado - 4900.C17.GD - Deca - Deca'
+    b = "Bandagem Vollke Elastica Preta 5 Metros"
+    for key in (dk.fingerprint, dk.token_key, dk.phonetic_key, dk.ngram_fingerprint):
+        assert key(a) != key(b)
+    assert not dk.shares_word(a, b)
+
+
+def test_numbers_are_part_of_the_key():
+    # removing numbers made the phonetic key join 219 different-product gold pairs
+    assert dk.phonetic_key("Shampoo Aussie Moist 865ML") != dk.phonetic_key("Shampoo Aussie Moist 180 Ml")
+
+
+def test_limit_loanword_spelling():
+    # hambúrguer (g) and hamburger (j before e) are read differently: a known limit of the phonetic key
+    assert dk.phonetic_key("Hambúrguer") != dk.phonetic_key("Hamburger")
+
+
+def test_limit_mojibake():
+    # broken encoding ("lav¨¢vel") is not repaired here: fix the text first (PtBr.Text repairs it)
+    assert dk.normalize("lav¨¢vel") != dk.normalize("lavável")

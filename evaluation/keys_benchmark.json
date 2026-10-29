@@ -1,0 +1,174 @@
+{
+ "gold": {
+  "pairs": 715,
+  "same_product": 164,
+  "different": 551,
+  "keys": {
+   "normalize": {
+    "joined_same": 11,
+    "joined_different": 0,
+    "recall": 0.06707317073170732,
+    "precision": 1.0
+   },
+   "fingerprint": {
+    "joined_same": 16,
+    "joined_different": 1,
+    "recall": 0.0975609756097561,
+    "precision": 0.9411764705882353
+   },
+   "token_key": {
+    "joined_same": 16,
+    "joined_different": 1,
+    "recall": 0.0975609756097561,
+    "precision": 0.9411764705882353
+   },
+   "phonetic_key": {
+    "joined_same": 12,
+    "joined_different": 2,
+    "recall": 0.07317073170731707,
+    "precision": 0.8571428571428571
+   },
+   "ngram_fingerprint": {
+    "joined_same": 13,
+    "joined_different": 0,
+    "recall": 0.07926829268292683,
+    "precision": 1.0
+   },
+   "fingerprint_2019": {
+    "joined_same": 19,
+    "joined_different": 31,
+    "recall": 0.11585365853658537,
+    "precision": 0.38
+   },
+   "phonetic_no_digits": {
+    "joined_same": 22,
+    "joined_different": 219,
+    "recall": 0.13414634146341464,
+    "precision": 0.0912863070539419
+   },
+   "skeleton": {
+    "joined_same": 36,
+    "joined_different": 254,
+    "recall": 0.21951219512195122,
+    "precision": 0.12413793103448276
+   },
+   "skeleton_2019": {
+    "joined_same": 23,
+    "joined_different": 219,
+    "recall": 0.1402439024390244,
+    "precision": 0.09504132231404959
+   },
+   "omission": {
+    "joined_same": 45,
+    "joined_different": 268,
+    "recall": 0.27439024390243905,
+    "precision": 0.14376996805111822
+   }
+  }
+ },
+ "blocks": {
+  "distinct_names": 9971,
+  "keys": {
+   "normalize": {
+    "blocks": 8855,
+    "names_sharing_a_key": 2050,
+    "largest_block": 7,
+    "largest_block_key": "jogo adivinha quem hasbro"
+   },
+   "fingerprint": {
+    "blocks": 8448,
+    "names_sharing_a_key": 2647,
+    "largest_block": 20,
+    "largest_block_key": "9 de mariana oceane paleta saad shades sombras"
+   },
+   "token_key": {
+    "blocks": 8319,
+    "names_sharing_a_key": 2843,
+    "largest_block": 22,
+    "largest_block_key": "9 mariana oceane paleta saad shade sombra"
+   },
+   "phonetic_key": {
+    "blocks": 8776,
+    "names_sharing_a_key": 2182,
+    "largest_block": 10,
+    "largest_block_key": "JG ADV3 KM ASBR"
+   },
+   "ngram_fingerprint": {
+    "blocks": 8759,
+    "names_sharing_a_key": 2204,
+    "largest_block": 8,
+    "largest_block_key": "0g1550aravcaeriakpm1ocprrorsruseumvi"
+   },
+   "fingerprint_2019": {
+    "blocks": 7766,
+    "names_sharing_a_key": 3574,
+    "largest_block": 23,
+    "largest_block_key": "acte de sports "
+   },
+   "phonetic_no_digits": {
+    "blocks": 7522,
+    "names_sharing_a_key": 3818,
+    "largest_block": 22,
+    "largest_block_key": "EXTMS KB P X MTRS PRT"
+   },
+   "skeleton": {
+    "blocks": 6726,
+    "names_sharing_a_key": 4863,
+    "largest_block": 36,
+    "largest_block_key": "EXTNSCBPLMRGAO"
+   },
+   "skeleton_2019": {
+    "blocks": 7474,
+    "names_sharing_a_key": 3869,
+    "largest_block": 21,
+    "largest_block_key": "E/XTNSCBPLXMTRSPRT/XTNSCBPLXMTRSPRT"
+   },
+   "omission": {
+    "blocks": 6337,
+    "names_sharing_a_key": 5319,
+    "largest_block": 43,
+    "largest_block_key": "XBMGPCLNTSREAO"
+   }
+  }
+ },
+ "counterexamples": {
+  "omission": [
+   [
+    "Acabamento para Registro Gaveta 1 1/2\" LK Cromado - 4900.C17.GD - Deca - Deca",
+    "Bandagem Vollke Elastica Preta 5 Metros",
+    "KVBMGPDCLNTSRAEOI"
+   ],
+   [
+    "Acabamento para Registro Gaveta 1 1/2\" LK Cromado - 4900.C17.GD - Deca - Deca",
+    "Bandagem Vollke Elástica 5 Metros Preta",
+    "KVBMGPDCLNTSRAEOI"
+   ],
+   [
+    "Biscoito Salgado Mãe Terra Cebola E Salsa 18 Un - 50 Gr",
+    "Brinco Losango com Diamantes Ouro Amarelo",
+    "BMGDCLNTSRIOAEU"
+   ]
+  ],
+  "skeleton": [],
+  "fingerprint_2019": [],
+  "phonetic_no_digits": [
+   [
+    "Adivinha o que e",
+    "Adivinhe o que e",
+    "ADV3 O K E"
+   ]
+  ],
+  "documented_2019": [
+   [
+    "DVD Canta Rio 98",
+    "Dvd - Centurião",
+    "skeleton_2019: D/VCNTR/VCNTR / D/VCNTR/VCNTR"
+   ],
+   [
+    "Barraca Vintage Hambúrguer",
+    "Barraca Vintage Hamburger",
+    "phonetic_key: B2K VMTJ AMBRGR / B2K VMTJ AMBRJR"
+   ]
+  ]
+ }
+}

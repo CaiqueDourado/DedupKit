@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- "Why these keys": `evaluation/keys_benchmark.py` measures the shipped name keys and the 2019 experiments that were
+  dropped (omission, skeleton, the every-other-word fingerprint, phonetic key without numbers) on the 715 decided gold
+  pairs and the catalog sample. Their counterexamples are unit tests in Python and .NET.
+
 ## 0.2.0 (2026-10-21)
 
 Attribute check, after 780 real pairs labelled by hand:
