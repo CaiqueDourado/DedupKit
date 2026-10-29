@@ -208,6 +208,7 @@ As chaves de imagem vêm da assinatura 16×16 do mesmo catálogo, hoje
 
 ## Relacionados
 
+- [search-pattern-miner](https://github.com/CaiqueDourado/search-pattern-miner): transforma buscas em padrões com os mesmos radicais e chaves, do mesmo autor.
 - [google-keywords-dataset](https://github.com/CaiqueDourado/google-keywords-dataset): 38 milhões de buscas do Google agrupadas em padrões com radicais e troca de entidades, a mesma família de chaves usada aqui ([Kaggle](https://www.kaggle.com/datasets/caiquedourado/google-keywords-dataset)).
 - [brazilian-ecommerce-products](https://github.com/CaiqueDourado/brazilian-ecommerce-products): as 114,6 milhões de ofertas que este agrupamento juntou.
 - [product-matching-pairs-portuguese](https://github.com/CaiqueDourado/product-matching-pairs-portuguese): pares rotulados para medir um matcher, com negativos difíceis.
