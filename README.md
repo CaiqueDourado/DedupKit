@@ -122,6 +122,53 @@ flowchart TD
 
 The exact rules, for both languages, are in [spec/ALGORITHMS.md](spec/ALGORITHMS.md).
 
+### A name through each key
+
+Each name rule turns the name into a key; listings with the same key fall in the same block. Two real ways of
+writing the same headphones, and what each key makes of them (rule names in brackets, with the guard that keeps
+short or empty keys out):
+
+```mermaid
+flowchart LR
+  A["A: Fone de Ouvido sem Fio JBL Tune 510BT Preto<br/>B: FONES DE OUVIDO JBL TUNE 510BT S/ FIO PRETO"]
+  A --> N["normalize · rule name (2+ words)<br/>A: fone de ouvido sem fio jbl tune 510bt preto<br/>B: fones de ouvido jbl tune 510bt s fio preto"] --> N2["✗ different"]
+  A --> F["fingerprint · rule name_fingerprint (3+ distinct words)<br/>unique words, sorted<br/>A: 510bt de fio fone jbl ouvido preto sem tune<br/>B: 510bt de fio fones jbl ouvido preto s tune"] --> F2["✗ fone ≠ fones, sem ≠ s"]
+  A --> P["phonetic_key · rule name_phonetic<br/>sounds per word, in order<br/>A: FN D OVD SM F JB TN 510BT PRT<br/>B: FNS D OVD JB TN 510BT S F PRT"] --> P2["✗ word order differs"]
+  A --> G["ngram_fingerprint · rule name_ngram (10+ letters)<br/>character bigrams, unique, sorted"] --> G2["✗ different"]
+  A --> T["token_key · rule name_tokens (2+ words)<br/>no stopwords (de, sem, s), singular, sorted<br/>A and B: 510bt fio fone jbl ouvido preto tune"] --> T2["✓ same block"]
+```
+
+The other rules key on the barcode (long GTIN, and short code + brand), the URL without tracking parameters and the
+image signature. A key shared by more than 100 listings (`max_block`) is skipped and reported: it is a placeholder,
+not a product.
+
+### Checking a pair
+
+Two listings in the same block are only a candidate. This is what decides:
+
+```mermaid
+flowchart TD
+  P["pair in the same block<br/>(any rule)"] --> L{"already linked<br/>by another rule?"}
+  L -- yes --> SKIP["nothing to do"]
+  L -- no --> C{"rule = barcode?"}
+  C -- yes --> W{"names share<br/>a word?"}
+  W -- no --> R1["refused: names share no word<br/>(a store reused the code)"]
+  W -- yes --> X
+  C -- no --> X["extract attributes from each name<br/>weight, volume, voltage, power, memory, battery,<br/>length, screen, BTU, colour, gender, size,<br/>pack quantity, dimension lists"]
+  X --> D{"for each attribute<br/>both names state"}
+  D -- "dimension lists" --> DL{"one list starts<br/>with the other?<br/>(20x30 vs 20x30x10)"}
+  DL -- no --> R2["refused: dimensions 20x30 vs 30x40"]
+  D -- "other attributes" --> V{"any value<br/>in common?<br/>(110 = 127 V,<br/>inox = prata = cromado)"}
+  V -- no --> R3["refused: power_w 7800 vs 5500<br/>size 38 vs 40 · quantity 3 vs 6"]
+  DL -- yes --> OK
+  V -- yes --> OK{"brand check on?<br/>(off by default)"}
+  OK -- "yes, brands differ" --> R4["refused: brand"]
+  OK -- "no / same brand" --> LINK["link, with rule and key value"]
+  LINK --> CL["clusters: connected components<br/>(or the 2019 two-hop mode)"]
+```
+
+Every refusal is returned with its rule, key value and reason, so a wrong one can be traced to the line that made it.
+
 ## What each safeguard buys
 
 Measured on 4,073 synthetic listings of 1,138 product variants with known answers

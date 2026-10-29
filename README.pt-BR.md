@@ -123,6 +123,53 @@ flowchart TD
 
 As regras exatas, para as duas linguagens, estão em [spec/ALGORITHMS.md](spec/ALGORITHMS.md) (em inglês).
 
+### Um nome passando por cada chave
+
+Cada regra de nome transforma o nome numa chave; anúncios com a mesma chave caem no mesmo bloco. Duas formas reais
+de escrever o mesmo fone, e o que cada chave faz com elas (o nome da regra, com a trava que deixa de fora chaves
+curtas ou vazias):
+
+```mermaid
+flowchart LR
+  A["A: Fone de Ouvido sem Fio JBL Tune 510BT Preto<br/>B: FONES DE OUVIDO JBL TUNE 510BT S/ FIO PRETO"]
+  A --> N["normalize · regra name (2+ palavras)<br/>A: fone de ouvido sem fio jbl tune 510bt preto<br/>B: fones de ouvido jbl tune 510bt s fio preto"] --> N2["✗ diferentes"]
+  A --> F["fingerprint · regra name_fingerprint (3+ palavras distintas)<br/>palavras únicas, ordenadas<br/>A: 510bt de fio fone jbl ouvido preto sem tune<br/>B: 510bt de fio fones jbl ouvido preto s tune"] --> F2["✗ fone ≠ fones, sem ≠ s"]
+  A --> P["phonetic_key · regra name_phonetic<br/>sons por palavra, na ordem<br/>A: FN D OVD SM F JB TN 510BT PRT<br/>B: FNS D OVD JB TN 510BT S F PRT"] --> P2["✗ ordem das palavras difere"]
+  A --> G["ngram_fingerprint · regra name_ngram (10+ letras)<br/>bigramas de caracteres, únicos, ordenados"] --> G2["✗ diferentes"]
+  A --> T["token_key · regra name_tokens (2+ palavras)<br/>sem stopwords (de, sem, s), no singular, ordenadas<br/>A e B: 510bt fio fone jbl ouvido preto tune"] --> T2["✓ mesmo bloco"]
+```
+
+As outras regras usam o código de barras (GTIN longo, e código curto + marca), a URL sem parâmetros de rastreio e a
+assinatura da imagem. Uma chave com mais de 100 anúncios (`max_block`) é ignorada e informada: é um código genérico,
+não um produto.
+
+### Conferindo um par
+
+Dois anúncios no mesmo bloco são só candidatos. Isto é o que decide:
+
+```mermaid
+flowchart TD
+  P["par no mesmo bloco<br/>(qualquer regra)"] --> L{"já ligados<br/>por outra regra?"}
+  L -- sim --> SKIP["nada a fazer"]
+  L -- não --> C{"regra = código<br/>de barras?"}
+  C -- sim --> W{"os nomes têm<br/>palavra em comum?"}
+  W -- não --> R1["recusado: nenhuma palavra em comum<br/>(a loja reusou o código)"]
+  W -- sim --> X
+  C -- não --> X["extrai os atributos de cada nome<br/>peso, volume, voltagem, potência, memória, bateria,<br/>comprimento, tela, BTU, cor, gênero, tamanho,<br/>quantidade do kit, listas de dimensões"]
+  X --> D{"para cada atributo<br/>que os dois informam"}
+  D -- "listas de dimensões" --> DL{"uma lista começa<br/>com a outra?<br/>(20x30 e 20x30x10)"}
+  DL -- não --> R2["recusado: dimensões 20x30 vs 30x40"]
+  D -- "outros atributos" --> V{"algum valor<br/>em comum?<br/>(110 = 127 V,<br/>inox = prata = cromado)"}
+  V -- não --> R3["recusado: power_w 7800 vs 5500<br/>size 38 vs 40 · quantity 3 vs 6"]
+  DL -- sim --> OK
+  V -- sim --> OK{"conferência de marca ligada?<br/>(desligada por padrão)"}
+  OK -- "sim, marcas diferentes" --> R4["recusado: marca"]
+  OK -- "não / mesma marca" --> LINK["liga, com regra e valor da chave"]
+  LINK --> CL["grupos: componentes conexos<br/>(ou o modo de 2 saltos de 2019)"]
+```
+
+Toda recusa volta com a regra, o valor da chave e o motivo, então um erro pode ser rastreado até a linha que o causou.
+
 ## O que cada proteção rende
 
 Medido em 4.073 anúncios sintéticos de 1.138 variantes de produto com resposta conhecida
