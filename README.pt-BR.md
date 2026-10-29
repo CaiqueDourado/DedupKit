@@ -297,7 +297,7 @@ As chaves de imagem vêm da assinatura 16×16 do mesmo catálogo, hoje
 
 ## Relacionados
 
-- Artigo: [Metaphone, Soundex, n-gramas e MinHash em nomes de produtos brasileiros](https://github.com/CaiqueDourado/articles/blob/main/text-similarity/README.pt-BR.md): o que cada chave e cada checagem faz em nomes reais de produtos brasileiros.
+- Artigo: [Metaphone, Soundex, n-gramas e MinHash em nomes de produtos brasileiros](https://github.com/CaiqueDourado/articles/blob/main/text-similarity/README.pt-BR.md) ([em inglês no Medium](https://medium.com/@caiquedourado/metaphone-soundex-n-grams-and-minhash-on-brazilian-product-names-d6f67745ee4d)): o que cada chave e cada checagem faz em nomes reais de produtos brasileiros.
 - [search-pattern-miner](https://github.com/CaiqueDourado/search-pattern-miner): transforma buscas em padrões com os mesmos radicais e chaves, do mesmo autor.
 - [google-keywords-dataset](https://github.com/CaiqueDourado/google-keywords-dataset): 38 milhões de buscas do Google agrupadas em padrões com radicais e troca de entidades, a mesma família de chaves usada aqui ([Kaggle](https://www.kaggle.com/datasets/caiquedourado/google-keywords-dataset)).
 - [brazilian-ecommerce-products](https://github.com/CaiqueDourado/brazilian-ecommerce-products): as 114,6 milhões de ofertas que este agrupamento juntou.
