@@ -200,6 +200,7 @@ Image keys come from the 16×16 signature of the same catalog, now
 - [brazilian-ecommerce-products](https://github.com/CaiqueDourado/brazilian-ecommerce-products): the 114.6 million offers this matching grouped.
 - [product-matching-pairs-portuguese](https://github.com/CaiqueDourado/product-matching-pairs-portuguese): labelled pairs to measure a matcher, with hard negatives.
 - [fipe-ficha-tecnica-veiculos](https://github.com/CaiqueDourado/fipe-ficha-tecnica-veiculos): 25.5 million vehicle × product pairs matched by name alone, most of them wrong. It shows why the attribute check and the audit trail exist.
+- [dicionario-portugues](https://github.com/CaiqueDourado/dicionario-portugues): 272 thousand Portuguese words with phonetic keys, rhymes and AI-generated texts ([Kaggle](https://www.kaggle.com/datasets/caiquedourado/dicionario-portugues)): Metaphone, fingerprint and n-gram keys for every word.
 
 ## Repository
 

@@ -201,6 +201,7 @@ As chaves de imagem vêm da assinatura 16×16 do mesmo catálogo, hoje
 - [brazilian-ecommerce-products](https://github.com/CaiqueDourado/brazilian-ecommerce-products): as 114,6 milhões de ofertas que este agrupamento juntou.
 - [product-matching-pairs-portuguese](https://github.com/CaiqueDourado/product-matching-pairs-portuguese): pares rotulados para medir um matcher, com negativos difíceis.
 - [fipe-ficha-tecnica-veiculos](https://github.com/CaiqueDourado/fipe-ficha-tecnica-veiculos): 25,5 milhões de pares veículo × produto casados só pelo nome, a maioria errada. Mostra por que a conferência de atributos e a trilha de auditoria existem.
+- [dicionario-portugues](https://github.com/CaiqueDourado/dicionario-portugues): 272 mil palavras do português com chaves fonéticas, rimas e textos gerados por IA ([Kaggle](https://www.kaggle.com/datasets/caiquedourado/dicionario-portugues)): chaves Metaphone, fingerprint e n-gramas para cada palavra.
 
 ## Repositório
 
